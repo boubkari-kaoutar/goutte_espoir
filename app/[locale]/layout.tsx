@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
+import PageLoader from '@/components/PageLoader';
 import '../globals.css';
 
 const inter = Inter({
@@ -58,6 +59,7 @@ export default async function LocaleLayout({
     >
       <body className="bg-white text-gray-900 antialiased">
         <NextIntlClientProvider messages={messages}>
+          <PageLoader />
           <SmoothScroll>
             <Navbar />
             <main className="relative overflow-hidden">
