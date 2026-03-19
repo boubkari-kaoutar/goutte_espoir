@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "vision": "Vision",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Énergie Solaire · Maroc",
+    "headline1": "L'énergie du soleil,",
+    "headline2": "au service de l'humain.",
+    "subheadline": "Goutte d'Espoir transforme chaque rayon de soleil en opportunité. Installations solaires, conseil énergétique et suivi personnalisé — pour un Maroc plus propre, plus juste, plus lumineux.",
+    "cta": "Découvrir nos solutions",
+    "ctaSecondary": "Nous contacter",
+    "scrollHint": "Défiler pour explorer"
+  },
+  "about": {
+    "badge": "Notre identité",
+    "title": "Une goutte qui fait la différence",
+    "whoWeAre": "Qui sommes-nous ?",
+    "whoWeAreDesc": "Goutte d'Espoir est une organisation marocaine engagée dans la transition énergétique. Fondée sur des valeurs d'entraide, d'innovation et de respect de l'environnement, nous accompagnons les particuliers, les entreprises et les coopératives vers une indépendance énergétique durable.",
+    "mission": "Notre mission",
+    "missionDesc": "Rendre l'énergie solaire accessible à tous. Pas seulement aux grandes entreprises — à chaque foyer, chaque village, chaque avenir.",
+    "vision": "Notre vision",
+    "visionDesc": "Un Maroc où chaque toit devient une centrale d'espoir. Où l'énergie propre n'est plus un luxe, mais un droit.",
+    "logoTitle": "Symbolique de notre logo",
+    "logoSubtitle": "Notre logo raconte une histoire avant même de lire notre nom.",
+    "description": "Goutte d'Espoir est une organisation marocaine engagée dans la promotion des énergies renouvelables et la sensibilisation à la préservation de l'environnement. Chaque action, si petite soit-elle, contribue à un futur plus vert.",
+    "drop": {
+      "title": "La goutte d'eau",
+      "desc": "Symbole de vie et de ressources naturelles précieuses, qui nous rappelle que tout est lié."
+    },
+    "hands": {
+      "title": "Les mains vertes",
+      "desc": "La protection active de notre environnement, le geste concret face aux défis climatiques."
+    },
+    "energy": {
+      "title": "Panneaux & Éoliennes",
+      "desc": "L'énergie renouvelable comme moteur du changement — propre, durable et inépuisable."
+    },
+    "community": {
+      "title": "Les silhouettes humaines",
+      "desc": "La communauté au cœur de tout. Parce que la vraie énergie, c'est la solidarité."
+    },
+    "stat1": "Projets réalisés",
+    "stat2": "Familles aidées",
+    "stat3": "Tonnes de CO₂ économisées"
+  },
+  "services": {
+    "badge": "Nos expertises",
+    "title": "Des solutions pour demain",
+    "subtitle": "De l'installation à la maintenance, nous vous accompagnons à chaque étape de votre transition énergétique.",
+    "solar": {
+      "tagline": "Votre toit, notre expertise.",
+      "title": "Installation Solaire",
+      "desc": "De l'étude technique à la mise en service, nous concevons et installons des systèmes photovoltaïques sur mesure, adaptés à votre consommation et à votre budget. Chaque installation est pensée pour durer.",
+      "features": ["Installation clé en main", "Étude personnalisée", "Garantie longue durée"]
+    },
+    "eco": {
+      "tagline": "Éclairez vos décisions avant d'éclairer votre maison.",
+      "title": "Conseil & Accompagnement",
+      "desc": "Audit énergétique complet, simulation de rentabilité, accompagnement administratif et aide aux démarches de subvention. Nous vous guidons de A à Z, sans jargon technique.",
+      "features": ["Audit énergétique", "Simulation de rentabilité", "Aide aux subventions"]
+    },
+    "support": {
+      "tagline": "Votre système mérite une attention continue.",
+      "title": "Maintenance & Monitoring",
+      "desc": "Contrats d'entretien préventif, nettoyage des panneaux, diagnostics à distance et interventions rapides. Votre installation produit à son plein potentiel, chaque jour.",
+      "features": ["Maintenance préventive", "Diagnostic à distance", "Intervention rapide"]
+    },
+    "learnMore": "En savoir plus"
+  },
+  "vision": {
+    "badge": "Notre vision",
+    "title": "Un Maroc 100% renouvelable",
+    "quote": "Chaque goutte d'espoir compte pour construire l'océan du changement.",
+    "description": "Nous croyons en un avenir où chaque foyer marocain bénéficie d'une énergie propre, abordable et durable. Notre vision est de démocratiser les énergies renouvelables et de bâtir des communautés résilientes.",
+    "impactTitle": "Notre impact en chiffres",
+    "impactSubtitle": "Chaque chiffre représente une vie transformée.",
+    "impact1Label": "Projets réalisés",
+    "impact2Label": "Familles aidées",
+    "impact3Label": "Tonnes CO₂ évitées",
+    "emotionalLine": "Une goutte d'eau n'éteint pas un feu — mais des millions de gouttes créent un océan. Ensemble, nous sommes cet océan.",
+    "pillars": {
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Technologies photovoltaïques de pointe, adaptées aux réalités marocaines pour un rendement optimal."
+      },
+      "community": {
+        "title": "Communauté",
+        "desc": "Chaque projet renforce les liens sociaux et l'autonomie des familles et coopératives locales."
+      },
+      "sustainability": {
+        "title": "Durabilité",
+        "desc": "Des solutions conçues pour durer, respectueuses de l'environnement et des générations futures."
+      }
+    },
+    "whyTitle": "Pourquoi nous choisir ?",
+    "why": {
+      "expertise": "Expertise locale — Une équipe formée aux réalités climatiques et techniques du Maroc, présente sur le terrain.",
+      "transparency": "Transparence totale — Devis clairs, aucun coût caché, suivi complet de chaque projet.",
+      "custom": "Solutions sur mesure — Chaque installation est unique, conçue selon vos besoins réels.",
+      "commitment": "Engagement durable — Nous ne vendons pas des produits. Nous construisons des partenariats à long terme.",
+      "impact": "Impact humain mesurable — Chaque projet réduit les factures, le CO₂ et renforce l'autonomie des communautés."
+    }
+  },
+  "contact": {
+    "badge": "Nous joindre",
+    "title": "Parlons de votre projet",
+    "subtitle": "Vous avez un projet, une question, ou simplement envie d'en savoir plus ? Notre équipe est disponible. Au Maroc, la conversation la plus simple reste la plus directe — on vous répond sur WhatsApp.",
+    "whatsapp": "Contacter via WhatsApp",
+    "replyTime": "Réponse rapide garantie",
+    "info": {
+      "location": "Maroc — Disponible partout",
+      "availability": "Lun–Sam, 9h–18h",
+      "response": "Réponse sous 24h · WhatsApp disponible"
+    }
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Des résultats concrets, des témoignages vrais.",
+    "t1": {
+      "name": "Rachid B.",
+      "role": "Agriculteur, Meknès",
+      "text": "Avant, la facture d'électricité était mon plus grand stress en été. Depuis l'installation par Goutte d'Espoir, j'ai réduit mes coûts de 70%. L'équipe a tout expliqué, tout géré. Je recommande les yeux fermés."
+    },
+    "t2": {
+      "name": "Fatima Z.",
+      "role": "Gérante d'une coopérative, Marrakech",
+      "text": "Ce qui m'a convaincu, c'est leur honnêteté. Pas de promesses exagérées — juste des résultats concrets. Un an après, notre coopérative économise plus de 2 000 DH par mois. C'est du concret."
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur l'énergie solaire.",
+    "q1": {
+      "question": "Combien coûte une installation solaire au Maroc ?",
+      "answer": "Le coût varie selon la puissance souhaitée et le type d'installation. En général, un système résidentiel standard (3 à 5 kWc) se situe entre 25 000 et 55 000 DH. Nous proposons une simulation gratuite et personnalisée, ainsi qu'une orientation vers les aides disponibles."
+    },
+    "q2": {
+      "question": "En combien de temps l'installation est-elle rentabilisée ?",
+      "answer": "En moyenne, entre 4 et 7 ans selon votre consommation et l'ensoleillement de votre région. Au Maroc, avec plus de 300 jours de soleil par an, le retour sur investissement est parmi les meilleurs au monde."
+    },
+    "q3": {
+      "question": "Est-ce que les panneaux fonctionnent par temps nuageux ?",
+      "answer": "Oui. Les panneaux photovoltaïques produisent de l'électricité même sous un ciel couvert — avec une production réduite de 20 à 40%. Au Maroc, l'ensoleillement exceptionnel garantit une production élevée toute l'année."
+    }
+  },
+  "footer": {
+    "tagline": "Chaque rayon de soleil est une opportunité. Nous vous aidons à la saisir.",
+    "links": "Liens rapides",
+    "rights": "Tous droits réservés.",
+    "madeWith": "Fait avec passion pour un futur durable"
+  }
+}
