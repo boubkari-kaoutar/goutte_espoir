@@ -65,8 +65,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div
-              className="relative w-20 h-20 transition-transform duration-300 group-hover:scale-110 rounded-xl overflow-hidden"
-              style={{ boxShadow: scrolled ? '0 2px 12px rgba(38,171,82,0.2)' : 'none', transition: 'box-shadow 0.3s' }}
+              className="relative w-11 h-11 transition-transform duration-300 group-hover:scale-110"
             >
               <Image src="/logo.png" alt="Goutte d'Espoir Logo" fill className="object-contain" priority />
             </div>

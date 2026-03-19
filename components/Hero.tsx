@@ -130,7 +130,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 ref={headlineRef} className="overflow-hidden mb-8 -space-y-1">
+            <h1 ref={headlineRef} className="mb-8 -space-y-1">
               <span className="block font-display font-black text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] text-gray-950 leading-[0.92] tracking-tight">
                 {t('headline1')}
               </span>
@@ -178,29 +178,25 @@ export default function Hero() {
                 </svg>
               </button>
             </div>
+
+            {/* Stats strip — inline under buttons */}
+            <div className={`mt-10 flex flex-wrap gap-3 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+              {[
+                { value: '50+',  label: 'Projets réalisés', color: '#26ab52' },
+                { value: '300+', label: 'Familles aidées',  color: '#0762d2' },
+                { value: '120T', label: 'CO₂ économisé',    color: '#a3d42a' },
+              ].map(({ value, label, color }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-2.5 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-white/60 shadow-sm"
+                >
+                  <span className="font-black text-sm number-badge leading-none" style={{ color }}>{value}</span>
+                  <span className="text-gray-500 text-xs font-medium">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* Stats strip */}
-      <div className="absolute bottom-24 left-0 right-0 z-10 pointer-events-none">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex flex-wrap gap-3 ${isRTL ? 'justify-end' : 'justify-start'}`}>
-            {[
-              { value: '50+',  label: 'Projets réalisés', color: '#26ab52' },
-              { value: '300+', label: 'Familles aidées',  color: '#0762d2' },
-              { value: '120T', label: 'CO₂ économisé',    color: '#a3d42a' },
-            ].map(({ value, label, color }) => (
-              <div
-                key={label}
-                className="flex items-center gap-2.5 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-white/60 shadow-sm"
-              >
-                <span className="font-black text-sm number-badge leading-none" style={{ color }}>{value}</span>
-                <span className="text-gray-500 text-xs font-medium">{label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
