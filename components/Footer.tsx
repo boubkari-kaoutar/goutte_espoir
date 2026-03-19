@@ -136,9 +136,19 @@ export default function Footer() {
                 <span className="font-mono">+212 636 227 511</span>
               </a>
 
-              <div className={`flex items-center gap-2 text-gray-400 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <span>🇲🇦</span>
-                <span>Maroc</span>
+              <div className="flex flex-col gap-1.5 text-sm text-gray-500">
+                <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 flex-shrink-0 text-[#26ab52]" fill="none" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                  <span className="font-medium">Oussama AGDID</span>
+                </div>
+                <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 flex-shrink-0 text-[#0762d2]" fill="none" stroke="currentColor" strokeWidth={2}>
+                    <circle cx="12" cy="12" r="10" /><path strokeLinecap="round" d="M12 8v4l3 3" />
+                  </svg>
+                  <span className="text-gray-400">Énergie Solaire · 🇲🇦 Maroc</span>
+                </div>
               </div>
             </div>
 

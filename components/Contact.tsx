@@ -154,17 +154,28 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Phone number display */}
-            <div className={`mt-8 flex items-center gap-3 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <div className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-              <a
-                href="https://wa.me/212636227511"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 font-mono text-sm hover:text-[#26ab52] transition-colors duration-200"
-              >
-                +212 636 227 511
-              </a>
+            {/* Organisation info card */}
+            <div className="mt-8 rounded-2xl border border-gray-100 bg-gray-50 p-5 flex flex-col gap-3">
+              {[
+                { label: 'Responsable', value: 'Oussama AGDID', color: '#26ab52' },
+                { label: 'Téléphone', value: '+212 636 227 511', color: '#0762d2', href: 'https://wa.me/212636227511' },
+                { label: 'Organisation', value: "Goutte d'Espoir", color: '#26ab52' },
+                { label: "Secteur d'activité", value: 'Énergie Solaire', color: '#a3d42a' },
+              ].map(({ label, value, color, href }) => (
+                <div key={label} className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                  <span className="text-xs text-gray-400 font-medium w-32 flex-shrink-0">{label}</span>
+                  {href ? (
+                    <a href={href} target="_blank" rel="noopener noreferrer"
+                      className="text-sm font-semibold font-mono hover:opacity-80 transition-opacity"
+                      style={{ color }}>
+                      {value}
+                    </a>
+                  ) : (
+                    <span className="text-sm font-semibold text-gray-800">{value}</span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
