@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import PageLoader from '@/components/PageLoader';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import ScrollToTop from '@/components/ScrollToTop';
 import '../globals.css';
 
 const nunito = Nunito({
@@ -67,6 +68,7 @@ export default async function LocaleLayout({
             </main>
             <Footer />
             <FloatingWhatsApp />
+            <ScrollToTop />
           </SmoothScroll>
         </NextIntlClientProvider>
       </body>
