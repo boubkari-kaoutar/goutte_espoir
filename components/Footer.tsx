@@ -76,7 +76,7 @@ export default function Footer() {
 
         {/* Col 2 — Services */}
         <div>
-          <div className={`flex items-center gap-2 mb-5 ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <div className={`flex items-center gap-2 mb-5 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
             <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#26ab52' }} />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#26ab52' }}>
               {isRTL ? 'خدماتنا' : 'Nos Services'}
@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Col 3 — Entreprise */}
         <div>
-          <div className={`flex items-center gap-2 mb-5 ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <div className={`flex items-center gap-2 mb-5 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
             <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#0762d2' }} />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#0762d2' }}>
               {isRTL ? 'المؤسسة' : 'Entreprise'}
@@ -116,7 +116,7 @@ export default function Footer() {
 
         {/* Col 4 — Contact */}
         <div>
-          <div className={`flex items-center gap-2 mb-5 ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <div className={`flex items-center gap-2 mb-5 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
             <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#a3d42a' }} />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#a3d42a' }}>
               {isRTL ? 'التواصل' : 'Contact Direct'}

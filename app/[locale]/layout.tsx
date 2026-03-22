@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Outfit } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -11,7 +11,7 @@ import PageLoader from '@/components/PageLoader';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import '../globals.css';
 
-const outfit = Outfit({
+const nunito = Nunito({
   subsets: ['latin'],
   variable: '--font-outfit',
   display: 'swap',
@@ -55,7 +55,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRTL ? 'rtl' : 'ltr'}
-      className={`${outfit.variable} light`}
+      className={`${nunito.variable} light`}
     >
       <body className="bg-white text-gray-900 antialiased">
         <NextIntlClientProvider messages={messages}>

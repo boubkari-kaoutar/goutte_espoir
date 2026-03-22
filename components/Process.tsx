@@ -105,8 +105,11 @@ export default function Process() {
             const color = stepColors[i];
             const num = stepNumbers[i];
 
+            /* In RTL the grid columns visually reverse, so flip isRight */
+            const effectiveRight = isRTL ? !isRight : isRight;
+
             return (
-              <div key={key} className="relative lg:grid lg:grid-cols-2 min-h-[200px] mb-2 last:mb-0">
+              <div key={key} className="relative lg:grid lg:grid-cols-2 min-h-[200px] mb-2 last:mb-0" dir="ltr">
 
                 {/* Dot on the center line */}
                 <div
@@ -125,14 +128,14 @@ export default function Process() {
                     opacity: 0.055,
                     top: '50%',
                     transform: 'translateY(-50%)',
-                    ...(isRTL ? (isRight ? { left: '5%' } : { right: '5%' }) : (isRight ? { right: '5%' } : { left: '5%' })),
+                    ...(effectiveRight ? { right: '5%' } : { left: '5%' }),
                   }}>
                   {num}
                 </div>
 
                 {/* Left cell */}
-                <div className={`flex items-center ${isRight ? 'lg:justify-end lg:pr-16' : 'lg:justify-start lg:pl-0 lg:pr-16'}`}>
-                  {!isRight && (
+                <div className={`flex items-center ${effectiveRight ? 'lg:justify-end' : 'lg:justify-start lg:pe-16'}`}>
+                  {!effectiveRight && (
                     <div
                       ref={(el) => { stepsRef.current[i] = el; }}
                       className={`relative z-10 py-10 max-w-md ${isRTL ? 'text-right' : ''}`}>
@@ -151,8 +154,8 @@ export default function Process() {
                 </div>
 
                 {/* Right cell */}
-                <div className={`flex items-center ${isRight ? 'lg:justify-start lg:pl-16' : ''}`}>
-                  {isRight && (
+                <div className={`flex items-center ${effectiveRight ? 'lg:justify-start lg:ps-16' : ''}`}>
+                  {effectiveRight && (
                     <div
                       ref={(el) => { stepsRef.current[i] = el; }}
                       className={`relative z-10 py-10 max-w-md ${isRTL ? 'text-right' : ''}`}>
@@ -169,7 +172,7 @@ export default function Process() {
                     </div>
                   )}
                   {/* Mobile fallback for left steps */}
-                  {!isRight && (
+                  {!effectiveRight && (
                     <div className="lg:hidden py-8 max-w-md">
                       <h3 className="font-display font-black leading-tight mb-3" style={{ fontSize: '1.4rem', color }}>
                         {t(`${key}.title`)}

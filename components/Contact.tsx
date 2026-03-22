@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const s = {
   fr: {
     headingMain: 'PARLONS',
-    headingAccent: 'solaire.',
+    headingAccent: 'solaire',
     sub: "Décrivez votre projet — nous vous répondons sous 24h avec une étude personnalisée.",
     nameLabel: 'NOM COMPLET', namePh: 'Ex: Mohammed Alami',
     emailLabel: 'EMAIL', emailPh: 'votre@email.ma',

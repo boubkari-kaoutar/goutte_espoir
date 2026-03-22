@@ -225,6 +225,13 @@
       "answer": "Oui. Les panneaux photovoltaïques produisent de l'électricité même sous un ciel couvert — avec une production réduite de 20 à 40%. Au Maroc, l'ensoleillement exceptionnel garantit une production élevée toute l'année."
     }
   },
+  "aboutHero": {
+    "location": "Maroc — Disponible partout",
+    "discover": "Découvrez",
+    "brand": "Goutte d'Espoir",
+    "services": "Nos Services",
+    "contact": "Nous Contacter"
+  },
   "footer": {
     "tagline": "Chaque rayon de soleil est une opportunité. Nous vous aidons à la saisir.",
     "links": "Liens rapides",

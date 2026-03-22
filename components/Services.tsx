@@ -8,41 +8,43 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
-  {
-    key: 'solar',
-    number: '01',
-    color: '#26ab52',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&h=560&q=80',
-    stats: [
-      { value: '−70%', label: 'économies moy.' },
-      { value: '10 ans', label: 'de garantie' },
-      { value: '1–3j', label: "d'installation" },
-    ],
-  },
-  {
-    key: 'eco',
-    number: '02',
-    color: '#0762d2',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&h=560&q=80',
-    stats: [
-      { value: '100%', label: 'gratuit' },
-      { value: '4–7 ans', label: 'retour invest.' },
-      { value: '48h', label: 'délai de réponse' },
-    ],
-  },
-  {
-    key: 'support',
-    number: '03',
-    color: '#a3d42a',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=560&q=80',
-    stats: [
-      { value: '6j/7', label: 'disponibilité' },
-      { value: '<24h', label: "délai d'intervention" },
-      { value: '100%', label: 'suivi en ligne' },
-    ],
-  },
-];
+function getServices(isRTL: boolean) {
+  return [
+    {
+      key: 'solar',
+      number: '01',
+      color: '#26ab52',
+      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&h=560&q=80',
+      stats: [
+        { value: '−70%', label: isRTL ? 'متوسط التوفير' : 'économies moy.' },
+        { value: '10 ans', label: isRTL ? 'ضمان' : 'de garantie' },
+        { value: '1–3j', label: isRTL ? 'للتركيب' : "d'installation" },
+      ],
+    },
+    {
+      key: 'eco',
+      number: '02',
+      color: '#0762d2',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&h=560&q=80',
+      stats: [
+        { value: '100%', label: isRTL ? 'مجاني' : 'gratuit' },
+        { value: '4–7 ans', label: isRTL ? 'استرداد الاستثمار' : 'retour invest.' },
+        { value: '48h', label: isRTL ? 'وقت الرد' : 'délai de réponse' },
+      ],
+    },
+    {
+      key: 'support',
+      number: '03',
+      color: '#a3d42a',
+      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=560&q=80',
+      stats: [
+        { value: '6j/7', label: isRTL ? 'التوفر' : 'disponibilité' },
+        { value: '<24h', label: isRTL ? 'وقت التدخل' : "délai d'intervention" },
+        { value: '100%', label: isRTL ? 'مراقبة إلكترونية' : 'suivi en ligne' },
+      ],
+    },
+  ];
+}
 
 function CheckIcon({ color }: { color: string }) {
   return (
@@ -58,6 +60,7 @@ export default function Services() {
   const isRTL = locale === 'ar';
   const sectionRef = useRef<HTMLElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const services = getServices(isRTL);
 
   useEffect(() => {
     const ctx = gsap.context(() => {

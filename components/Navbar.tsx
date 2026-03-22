@@ -16,6 +16,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const isRTL = locale === 'ar';
 
+  /* Transparent mode only on home page */
+  const isHome = pathname === '/';
+  const isTransparent = isHome && !scrolled;
+
   const navLinks = [
     { key: 'home',     href: '/' },
     { key: 'about',    href: '/about' },
@@ -40,62 +44,82 @@ export default function Navbar() {
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
-    <nav ref={navRef}
+    <nav
+      ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/96 backdrop-blur-md border-b border-gray-100 py-3.5'
-          : 'py-5'
+        isTransparent
+          ? 'py-5 backdrop-blur-sm'
+          : 'bg-white/97 backdrop-blur-md border-b border-gray-100/80 py-3.5'
       }`}
       style={{
-        boxShadow: scrolled ? '0 1px 16px rgba(0,0,0,0.06)' : 'none',
-        background: scrolled ? undefined : 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%)',
+        boxShadow: isTransparent ? 'none' : '0 1px 24px rgba(0,0,0,0.07)',
+        background: isTransparent ? 'rgba(0,0,0,0.42)' : undefined,
       }}>
 
-      {/* dir="ltr" on this inner wrapper keeps the navbar layout
-          independent of the page dir, then we manually re-mirror only
-          what needs flipping — avoids double-reverse with html dir="rtl" */}
-      <div className="px-6 sm:px-12 lg:px-20 flex items-center justify-between" dir="ltr">
+      <div className={`px-6 sm:px-12 lg:px-20 flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`} dir="ltr">
 
-        {/* Logo — always LTR (brand name is French) */}
-        <Link href="/" className="flex items-center gap-3">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
           <div className="relative w-9 h-9 flex-shrink-0">
             <Image src="/logo.png" alt="Goutte d'Espoir" fill className="object-contain" priority />
           </div>
           <div className="hidden sm:block">
-            <div className={`font-display font-black text-[15px] leading-none transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            <div className={`font-display font-black text-[15px] leading-none transition-colors duration-300 ${
+              isTransparent ? 'text-white' : 'text-gray-900'
+            }`}>
               Goutte <span style={{ color: '#26ab52' }}>d&apos;Espoir</span>
             </div>
-            <div className={`text-[10px] font-medium tracking-[0.18em] uppercase mt-0.5 transition-colors duration-300 ${scrolled ? 'text-gray-400' : 'text-white/60'}`}>
+            <div className={`text-[10px] font-medium tracking-[0.18em] uppercase mt-0.5 transition-colors duration-300 ${
+              isTransparent ? 'text-white/55' : 'text-gray-400'
+            }`}>
               Énergie Solaire
             </div>
           </div>
         </Link>
 
-        {/* Desktop links — reversed order for RTL so "home" is near logo */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-6">
           {(isRTL ? [...navLinks].reverse() : navLinks).map(({ key, href }) => (
             <Link key={key} href={href}
-              className={`text-[13px] font-medium transition-colors duration-300 ${
+              className={`relative text-[13px] font-semibold transition-colors duration-200 whitespace-nowrap ${
                 isActive(href)
                   ? 'text-[#26ab52]'
-                  : scrolled
-                    ? 'text-gray-500 hover:text-gray-900'
-                    : 'text-white/80 hover:text-white'
-              }`}>
+                  : isTransparent
+                    ? 'text-white hover:text-white/80'
+                    : 'text-gray-500 hover:text-gray-900'
+              }`}
+>
               {t(key as Parameters<typeof t>[0])}
+              {isActive(href) && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full" style={{ background: '#26ab52' }} />
+              )}
             </Link>
           ))}
         </div>
 
-        {/* Right side — lang switcher + CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <div className={`flex items-center gap-0.5 rounded-lg p-0.5 border transition-colors duration-300 ${scrolled ? 'border-gray-200' : 'border-white/25 bg-white/10 backdrop-blur-sm'}`}>
+        {/* Language switcher — pill toggle */}
+        <div className="hidden md:flex items-center">
+          <div className={`relative flex items-center rounded-full p-0.5 transition-all duration-300 ${
+            isTransparent
+              ? 'bg-white/12 border border-white/20 backdrop-blur-sm'
+              : 'bg-gray-100 border border-gray-200'
+          }`}>
+            {/* sliding active pill */}
+            <div
+              className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-full transition-all duration-300 ease-in-out"
+              style={{
+                background: '#26ab52',
+                left: locale === 'fr' ? '2px' : 'calc(50%)',
+              }}
+            />
             {['fr', 'ar'].map((loc) => (
-              <button key={loc} onClick={() => switchLocale(loc)}
-                className={`px-3 py-1.5 rounded-md text-[11px] font-semibold tracking-wide transition-all duration-200 ${
+              <button
+                key={loc}
+                onClick={() => switchLocale(loc)}
+                className={`relative z-10 w-10 py-1.5 rounded-full text-[11px] font-bold tracking-widest uppercase transition-colors duration-300 ${
                   locale === loc
-                    ? scrolled ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
-                    : scrolled ? 'text-gray-400 hover:text-gray-600' : 'text-white/70 hover:text-white'
+                    ? 'text-white'
+                    : isTransparent ? 'text-white/60 hover:text-white/90' : 'text-gray-400 hover:text-gray-700'
                 }`}>
                 {loc.toUpperCase()}
               </button>
@@ -106,9 +130,15 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1.5 p-1.5" aria-label="Menu">
-          <div className={`w-5 h-0.5 bg-gray-700 transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <div className={`w-5 h-0.5 bg-gray-700 transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
-          <div className={`w-5 h-0.5 bg-gray-700 transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <div className={`w-5 h-0.5 transition-all duration-200 ${
+            isTransparent ? 'bg-white' : 'bg-gray-700'
+          } ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <div className={`w-5 h-0.5 transition-all duration-200 ${
+            isTransparent ? 'bg-white' : 'bg-gray-700'
+          } ${menuOpen ? 'opacity-0' : ''}`} />
+          <div className={`w-5 h-0.5 transition-all duration-200 ${
+            isTransparent ? 'bg-white' : 'bg-gray-700'
+          } ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
@@ -119,16 +149,20 @@ export default function Navbar() {
             <Link key={key} href={href} onClick={() => setMenuOpen(false)}
               className={`w-full py-2.5 text-[13px] font-medium border-b border-gray-50 last:border-0 transition-colors ${
                 isRTL ? 'text-right' : ''
-              } ${isActive(href) ? 'text-[#26ab52]' : 'text-gray-500'}`}>
+              } ${isActive(href) ? 'text-[#26ab52] font-semibold' : 'text-gray-500'}`}>
               {t(key as Parameters<typeof t>[0])}
             </Link>
           ))}
-          <div className="pt-3 w-full flex items-center gap-2">
+          {/* Mobile lang switcher */}
+          <div className="pt-4 w-full flex items-center gap-2">
             {['fr', 'ar'].map((loc) => (
               <button key={loc} onClick={() => switchLocale(loc)}
-                className={`flex-1 py-2 rounded-lg text-[11px] font-semibold border transition-all ${
-                  locale === loc ? 'bg-gray-900 border-gray-900 text-white' : 'border-gray-200 text-gray-400'
-                }`}>
+                className={`flex-1 py-2.5 rounded-full text-[11px] font-bold tracking-widest uppercase transition-all ${
+                  locale === loc
+                    ? 'text-white'
+                    : 'text-gray-400 bg-gray-100'
+                }`}
+                style={locale === loc ? { background: '#26ab52' } : {}}>
                 {loc.toUpperCase()}
               </button>
             ))}

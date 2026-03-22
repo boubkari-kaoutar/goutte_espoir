@@ -45,14 +45,14 @@ export default function WhyChooseUs() {
     <section ref={sectionRef} className="relative bg-gray-50 overflow-hidden">
 
       {/* Section header */}
-      <div className="border-b border-gray-100 px-8 sm:px-14 lg:px-20 py-6 flex items-center">
+      <div className={`border-b border-gray-100 px-8 sm:px-14 lg:px-20 py-6 flex items-center ${isRTL ? 'justify-end' : ''}`}>
         <div className="flex items-center gap-4">
 <span className="text-gray-400 text-xs tracking-[0.25em] uppercase font-medium">{t('whyTitle')}</span>
         </div>
       </div>
 
       {/* Title */}
-      <div className="px-8 sm:px-14 lg:px-20 pt-16 pb-12 overflow-hidden">
+      <div className={`px-8 sm:px-14 lg:px-20 pt-16 pb-12 overflow-hidden ${isRTL ? 'text-right' : ''}`}>
         <div ref={titleRef} style={{ clipPath: 'inset(0 100% 0 0)' }}>
           <h2 className="font-display font-black text-gray-950 leading-[0.88] tracking-[-0.03em]"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>

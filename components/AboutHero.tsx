@@ -1,9 +1,10 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 export default function AboutHero() {
+  const t = useTranslations('aboutHero');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
@@ -41,7 +42,7 @@ export default function AboutHero() {
         <div className={`flex items-center gap-3 mb-10 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <div className="w-8 h-px" style={{ background: '#26ab52' }} />
           <span className="text-white/50 text-[11px] tracking-[0.28em] uppercase font-semibold">
-            {isRTL ? 'المغرب — متاح في كل مكان' : 'Maroc — Disponible partout'}
+            {t('location')}
           </span>
         </div>
 
@@ -49,12 +50,8 @@ export default function AboutHero() {
         <h1
           className="font-display font-black leading-[1.0] tracking-tight mb-16"
           style={{ fontSize: 'clamp(3.2rem, 8.5vw, 8rem)' }}>
-          <span className="text-white block">
-            {isRTL ? 'اكتشف' : 'Découvrez'}
-          </span>
-          <span className="block" style={{ color: '#26ab52' }}>
-            {isRTL ? 'قطرة أمل' : "Goutte d'Espoir"}
-          </span>
+          <span className="text-white block">{t('discover')}</span>
+          <span className="block" style={{ color: '#26ab52' }}>{t('brand')}</span>
         </h1>
 
         {/* CTAs */}
@@ -70,7 +67,7 @@ export default function AboutHero() {
               className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
               style={{ background: '#0d5e2a' }}
             />
-            <span className="relative z-10">{isRTL ? 'خدماتنا' : 'NOS SERVICES'}</span>
+            <span className="relative z-10">{t('services')}</span>
             <svg
               className={`relative z-10 w-3.5 h-3.5 transition-transform duration-300 ${isRTL ? 'rotate-180 group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -91,7 +88,7 @@ export default function AboutHero() {
               </svg>
             </span>
             <span className="transition-colors duration-200 group-hover:text-[#26ab52]">
-              {isRTL ? 'تواصل معنا' : 'NOUS CONTACTER'}
+              {t('contact')}
             </span>
           </Link>
 
