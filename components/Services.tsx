@@ -2,284 +2,187 @@
 
 import { useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SectionBadge from './SectionBadge';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const SolarIcon = () => (
-  <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
-    <rect x="6" y="18" width="52" height="33" rx="5" fill="white" opacity="0.22" />
-    <rect x="6" y="18" width="52" height="33" rx="5" stroke="white" strokeWidth="1.5" opacity="0.5" />
-    <line x1="6" y1="29" x2="58" y2="29" stroke="white" strokeWidth="1.5" opacity="0.4" />
-    <line x1="6" y1="40" x2="58" y2="40" stroke="white" strokeWidth="1.5" opacity="0.4" />
-    <line x1="23" y1="18" x2="23" y2="51" stroke="white" strokeWidth="1.5" opacity="0.4" />
-    <line x1="41" y1="18" x2="41" y2="51" stroke="white" strokeWidth="1.5" opacity="0.4" />
-    <rect x="26" y="51" width="12" height="7" rx="3" fill="white" opacity="0.35" />
-    <circle cx="51" cy="11" r="8" fill="white" opacity="0.9" />
-    {[0, 45, 90, 135, 180, 225, 270, 315].map((a, i) => (
-      <line
-        key={i}
-        x1={51 + 10 * Math.cos((a * Math.PI) / 180)}
-        y1={11 + 10 * Math.sin((a * Math.PI) / 180)}
-        x2={51 + 15 * Math.cos((a * Math.PI) / 180)}
-        y2={11 + 15 * Math.sin((a * Math.PI) / 180)}
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.7"
-      />
-    ))}
-  </svg>
-);
-
-const EcoIcon = () => (
-  <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
-    <circle cx="32" cy="32" r="26" stroke="white" strokeWidth="1.5" opacity="0.25" />
-    <circle cx="32" cy="32" r="18" fill="white" opacity="0.15" />
-    <path
-      d="M32 12 C32 12, 50 22, 50 38 C50 50, 42 58, 32 58 C22 58, 14 50, 14 38 C14 22, 32 12, 32 12Z"
-      stroke="white"
-      strokeWidth="1.5"
-      fill="none"
-      opacity="0.5"
-    />
-    <path d="M32 12 L32 58" stroke="white" strokeWidth="1.5" opacity="0.35" />
-    <path d="M14 38 L50 38" stroke="white" strokeWidth="1.5" opacity="0.35" />
-    <circle cx="32" cy="32" r="5" fill="white" opacity="0.9" />
-  </svg>
-);
-
-const SupportIcon = () => (
-  <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
-    <circle cx="32" cy="20" r="13" fill="white" opacity="0.22" />
-    <circle cx="32" cy="20" r="13" stroke="white" strokeWidth="1.5" opacity="0.5" />
-    <path d="M20 16 L25 21 L34 12" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M10 54 C10 42, 20 36, 32 36 C44 36, 54 42, 54 54" fill="white" opacity="0.2" />
-    <path d="M10 54 C10 42, 20 36, 32 36 C44 36, 54 42, 54 54" stroke="white" strokeWidth="1.5" fill="none" opacity="0.5" strokeLinecap="round" />
-    <circle cx="50" cy="50" r="9" fill="white" opacity="0.3" />
-    <circle cx="50" cy="50" r="9" stroke="white" strokeWidth="1.5" opacity="0.6" />
-    <path d="M46 50 L49 53 L54 46" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 const services = [
   {
     key: 'solar',
     number: '01',
-    gradient: 'linear-gradient(135deg, #26ab52 0%, #a3d42a 100%)',
-    glowColor: 'rgba(38,171,82,0.25)',
-    cardBg: 'from-green-50/60 to-lime-50/40',
-    border: 'border-green-100/80',
-    accentColor: '#26ab52',
-    tagBg: 'rgba(38,171,82,0.1)',
-    Icon: SolarIcon,
+    color: '#26ab52',
+    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&h=560&q=80',
+    stats: [
+      { value: '−70%', label: 'économies moy.' },
+      { value: '10 ans', label: 'de garantie' },
+      { value: '1–3j', label: "d'installation" },
+    ],
   },
   {
     key: 'eco',
     number: '02',
-    gradient: 'linear-gradient(135deg, #0762d2 0%, #74d1fa 100%)',
-    glowColor: 'rgba(7,98,210,0.22)',
-    cardBg: 'from-blue-50/60 to-sky-50/40',
-    border: 'border-blue-100/80',
-    accentColor: '#0762d2',
-    tagBg: 'rgba(7,98,210,0.1)',
-    Icon: EcoIcon,
+    color: '#0762d2',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&h=560&q=80',
+    stats: [
+      { value: '100%', label: 'gratuit' },
+      { value: '4–7 ans', label: 'retour invest.' },
+      { value: '48h', label: 'délai de réponse' },
+    ],
   },
   {
     key: 'support',
     number: '03',
-    gradient: 'linear-gradient(135deg, #a3d42a 0%, #26ab52 100%)',
-    glowColor: 'rgba(163,212,42,0.22)',
-    cardBg: 'from-lime-50/60 to-emerald-50/40',
-    border: 'border-lime-100/80',
-    accentColor: '#a3d42a',
-    tagBg: 'rgba(163,212,42,0.12)',
-    Icon: SupportIcon,
+    color: '#a3d42a',
+    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=560&q=80',
+    stats: [
+      { value: '6j/7', label: 'disponibilité' },
+      { value: '<24h', label: "délai d'intervention" },
+      { value: '100%', label: 'suivi en ligne' },
+    ],
   },
 ];
+
+function CheckIcon({ color }: { color: string }) {
+  return (
+    <svg className="w-4 h-4 flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill={color}>
+      <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" />
+    </svg>
+  );
+}
 
 export default function Services() {
   const t = useTranslations('services');
   const locale = useLocale();
   const isRTL = locale === 'ar';
-
   const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        headerRef.current,
-        { y: 50, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 1, ease: 'power3.out',
-          scrollTrigger: { trigger: headerRef.current, start: 'top 82%', toggleActions: 'play none none reverse' },
-        }
-      );
-
-      gsap.fromTo(
-        cardsRef.current ? Array.from(cardsRef.current.children) : [],
-        { y: 90, opacity: 0, scale: 0.93 },
-        {
-          y: 0, opacity: 1, scale: 1, duration: 1, stagger: 0.18, ease: 'power3.out',
-          scrollTrigger: { trigger: cardsRef.current, start: 'top 82%', toggleActions: 'play none none reverse' },
-        }
-      );
+      cardRefs.current.forEach((el) => {
+        if (!el) return;
+        gsap.fromTo(el,
+          { opacity: 0, y: 32 },
+          { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 82%' } }
+        );
+      });
     }, sectionRef);
-
     return () => ctx.revert();
   }, []);
 
   return (
-    <section
-      id="services"
-      ref={sectionRef}
-      className="relative py-24 lg:py-36 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f8fffe 50%, #ffffff 100%)' }}
-    >
-      {/* Background orbs */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(38,171,82,0.07) 0%, transparent 70%)', filter: 'blur(60px)' }} />
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(7,98,210,0.07) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+    <section id="services" ref={sectionRef} className="relative bg-white overflow-hidden">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <div ref={headerRef} className={`max-w-2xl mb-16 ${isRTL ? 'mr-auto text-right' : 'mx-auto text-center'}`}>
-          <SectionBadge>{t('badge')}</SectionBadge>
-          <h2 className="mt-5 font-display font-black text-4xl sm:text-5xl text-gray-950 leading-tight tracking-tight">
-            {t('title')}
-          </h2>
-          <div className={`mt-4 section-line ${isRTL ? 'mr-0 ml-auto' : 'mx-auto'}`} />
-          <p className="mt-6 text-lg text-gray-500 leading-relaxed font-light">
-            {t('subtitle')}
-          </p>
+      {/* Header */}
+      <div className="border-b border-gray-100 px-6 sm:px-12 lg:px-20 pt-24 pb-5 flex items-center">
+        <div className="flex items-center gap-3">
+<span className="text-gray-400 text-[11px] tracking-[0.2em] uppercase font-medium">{t('badge')}</span>
         </div>
+      </div>
 
-        {/* Cards */}
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-7">
-          {services.map(({ key, number, gradient, glowColor, cardBg, border, accentColor, tagBg, Icon }) => {
-            const features = [
-              t(`${key}.features.0`),
-              t(`${key}.features.1`),
-              t(`${key}.features.2`),
-            ];
+      {/* Intro */}
+      <div className={`px-6 sm:px-12 lg:px-20 pt-16 pb-4 ${isRTL ? 'text-right' : ''}`}>
+        <h2 className="font-display font-black text-gray-950 leading-tight tracking-tight mb-4"
+          style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)' }}>
+          {t('title')}
+        </h2>
+        <p className="text-gray-400 text-[15px] font-light max-w-lg">{t('subtitle')}</p>
+      </div>
 
-            return (
-              <div
-                key={key}
-                className={`service-card card-shine group relative rounded-3xl bg-gradient-to-br ${cardBg} border ${border} overflow-hidden flex flex-col`}
-                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.05)' }}
-              >
-                {/* Gradient header with icon */}
-                <div
-                  className="relative h-44 flex items-center justify-center overflow-hidden"
-                  style={{ background: gradient }}
-                >
-                  {/* Number badge */}
-                  <div className={`absolute top-4 ${isRTL ? 'left-4' : 'right-4'}`}>
-                    <span className="text-white/30 font-black text-4xl number-badge leading-none">{number}</span>
+      {/* Service cards */}
+      <div className="pb-20">
+        {services.map(({ key, number, color, image, stats }, i) => {
+          const imageRight = i % 2 === 0;
+          return (
+            <div
+              key={key}
+              ref={(el) => { cardRefs.current[i] = el; }}
+              className={`px-6 sm:px-12 lg:px-20 py-16 border-t border-gray-100 ${i % 2 === 1 ? 'bg-gray-50/50' : ''}`}
+            >
+              <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${
+                isRTL
+                  ? (imageRight ? 'lg:flex-row' : 'lg:flex-row-reverse')
+                  : (imageRight ? 'lg:flex-row' : 'lg:flex-row-reverse')
+              }`}>
+
+                {/* Text side */}
+                <div className={`flex-1 ${isRTL ? 'text-right' : ''}`}>
+                  <div className="flex items-center gap-3 mb-6" style={{ justifyContent: isRTL ? 'flex-end' : 'flex-start' }}>
+                    <span className="font-black text-[11px] tracking-[0.3em] uppercase" style={{ color }}>{number}</span>
+                    <div className="w-6 h-px bg-gray-200" />
+                    <span className="text-gray-400 text-[11px] tracking-[0.2em] uppercase font-medium">{t(`${key}.tagline` as Parameters<typeof t>[0])}</span>
                   </div>
 
-                  {/* Icon */}
-                  <div className="w-20 h-20 relative z-10 drop-shadow-lg">
-                    <Icon />
-                  </div>
-
-                  {/* Subtle pattern overlay */}
-                  <div
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                      backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                      backgroundSize: '20px 20px',
-                    }}
-                  />
-
-                  {/* Bottom fade */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 h-12"
-                    style={{ background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.08))' }}
-                  />
-
-                  {/* Glow on hover */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    style={{ background: `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15), transparent 70%)` }}
-                  />
-                </div>
-
-                {/* Body */}
-                <div className="flex flex-col flex-1 p-7">
-                  {/* Tag */}
-                  <div className={`inline-flex mb-4 ${isRTL ? 'justify-end' : ''}`}>
-                    <span
-                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full"
-                      style={{ color: accentColor, background: tagBg }}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: accentColor }} />
-                      {t(`${key}.title`)}
-                    </span>
-                  </div>
-
-                  <h3 className={`font-display font-bold text-2xl text-gray-950 mb-1 leading-tight ${isRTL ? 'text-right' : ''}`}>
-                    {t(`${key}.title`)}
+                  <h3 className="font-display font-black text-gray-950 leading-tight tracking-tight mb-5"
+                    style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)', color }}>
+                    {t(`${key}.title` as Parameters<typeof t>[0])}
                   </h3>
-                  <p className={`text-xs italic mb-3 font-medium ${isRTL ? 'text-right' : ''}`} style={{ color: accentColor }}>
-                    {t(`${key}.tagline`)}
-                  </p>
-                  <p className={`text-gray-500 text-sm leading-relaxed mb-6 font-light ${isRTL ? 'text-right' : ''}`}>
-                    {t(`${key}.desc`)}
+
+                  <p className="text-gray-500 text-[15px] leading-relaxed font-light mb-8">
+                    {t(`${key}.desc` as Parameters<typeof t>[0])}
                   </p>
 
                   {/* Features */}
-                  <ul className={`flex flex-col gap-2.5 mb-8 flex-1 ${isRTL ? 'items-end' : ''}`}>
-                    {features.map((f, i) => (
-                      <li
-                        key={i}
-                        className={`flex items-start gap-2.5 text-sm text-gray-600 ${isRTL ? 'flex-row-reverse' : ''}`}
-                      >
-                        <span
-                          className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                          style={{ background: tagBg }}
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full" style={{ background: accentColor }} />
+                  <div className="flex flex-col gap-3 mb-8">
+                    {[0, 1, 2].map((fi) => (
+                      <div key={fi} className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                        <CheckIcon color={color} />
+                        <span className="text-gray-600 text-[14px] font-medium">
+                          {t(`${key}.features.${fi}` as Parameters<typeof t>[0])}
                         </span>
-                        {f}
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+
+                  {/* Stats row */}
+                  <div className={`grid grid-cols-3 gap-4 pt-8 border-t border-gray-100 mb-8`}>
+                    {stats.map(({ value, label }) => (
+                      <div key={label} className={isRTL ? 'text-right' : ''}>
+                        <div className="font-black text-xl number-badge leading-none" style={{ color }} dir="ltr">{value}</div>
+                        <div className="text-gray-400 text-[11px] font-medium mt-1 uppercase tracking-wider">{label}</div>
+                      </div>
+                    ))}
+                  </div>
 
                   {/* CTA */}
-                  <a
-                    href="https://wa.me/212636227511"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group/btn inline-flex items-center gap-2 text-sm font-bold transition-all duration-300 ${isRTL ? 'flex-row-reverse self-end' : 'self-start'}`}
-                    style={{ color: accentColor }}
-                  >
-                    <span className="border-b border-transparent group-hover/btn:border-current pb-0.5 transition-all">{t('learnMore')}</span>
-                    <svg
-                      className={`w-4 h-4 transition-transform group-hover/btn:translate-x-1 ${isRTL ? 'rotate-180 group-hover/btn:-translate-x-1 group-hover/btn:translate-x-0' : ''}`}
-                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  <Link href={`/services/${key}`}
+                    className={`group inline-flex items-center gap-2.5 rounded-lg text-white text-[13px] font-semibold px-6 py-3 transition-opacity hover:opacity-85 ${isRTL ? 'flex-row-reverse' : ''}`}
+                    style={{ background: color }}>
+                    {t('learnMore')}
+                    <svg className={`w-4 h-4 transition-transform duration-200 ${isRTL ? 'rotate-180 group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
-                {/* Bottom glow on hover */}
-                <div
-                  className="absolute inset-x-0 bottom-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: gradient }}
-                />
+                {/* Image side */}
+                <div className="flex-shrink-0 w-full lg:w-[46%]">
+                  <div className="relative rounded-2xl overflow-hidden"
+                    style={{ boxShadow: `0 8px 40px ${color}18` }}>
+                    {/* Accent bar */}
+                    <div className="absolute top-0 left-0 right-0 h-1 z-10" style={{ background: color }} />
+                    <img
+                      src={image}
+                      alt={t(`${key}.title` as Parameters<typeof t>[0])}
+                      className="w-full h-72 lg:h-96 object-cover"
+                      loading="lazy"
+                    />
+                    {/* Number overlay */}
+                    <div className="absolute bottom-4 right-4 font-black text-white/20 leading-none select-none"
+                      style={{ fontSize: '7rem', lineHeight: 1 }}>
+                      {number}
+                    </div>
+                  </div>
+                </div>
+
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

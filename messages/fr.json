@@ -4,7 +4,8 @@
     "about": "À propos",
     "services": "Services",
     "vision": "Vision",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Devis gratuit"
   },
   "hero": {
     "badge": "Énergie Solaire · Maroc",
@@ -13,7 +14,26 @@
     "subheadline": "Goutte d'Espoir transforme chaque rayon de soleil en opportunité. Installations solaires, conseil énergétique et suivi personnalisé — pour un Maroc plus propre, plus juste, plus lumineux.",
     "cta": "Découvrir nos solutions",
     "ctaSecondary": "Nous contacter",
-    "scrollHint": "Défiler pour explorer"
+    "scrollHint": "Défiler pour explorer",
+    "trust1": "Garantie 10 ans",
+    "trust2": "Devis gratuit",
+    "trust3": "Installation certifiée",
+    "trust4": "Support 6j/7",
+    "metricsTitle": "Impact réel",
+    "metricsLive": "En direct",
+    "m1Label": "Réduction facture",
+    "m1Sub": "économies moyennes",
+    "m2Label": "Projets réalisés",
+    "m2Sub": "installations certifiées",
+    "m3Label": "CO₂ évité",
+    "m3Sub": "émissions annuelles",
+    "m4Label": "Familles autonomes",
+    "m4Sub": "dans tout le Maroc",
+    "metricsButton": "Demander un devis gratuit",
+    "stat1Label": "Projets",
+    "stat2Label": "Familles",
+    "stat3Label": "CO₂ évité",
+    "stat4Label": "Garantie"
   },
   "about": {
     "badge": "Notre identité",
@@ -71,6 +91,45 @@
     },
     "learnMore": "En savoir plus"
   },
+  "process": {
+    "sectionBadge": "Comment ça marche",
+    "sectionStep": "4 étapes",
+    "title1": "De zéro à l'autonomie",
+    "title2": "en 4 étapes.",
+    "subtitle": "Un accompagnement complet de la première question jusqu'au suivi annuel.",
+    "cta": "Demander un devis gratuit",
+    "ctaNote": "Devis gratuit · Réponse sous 24h · Sans engagement",
+    "s1": {
+      "title": "Consultation gratuite",
+      "desc": "Un échange pour comprendre vos besoins et votre consommation. Sans engagement."
+    },
+    "s2": {
+      "title": "Étude personnalisée",
+      "desc": "Audit énergétique complet et simulation de rentabilité par nos ingénieurs."
+    },
+    "s3": {
+      "title": "Installation certifiée",
+      "desc": "Notre équipe installe votre système en 1 à 3 jours avec mise en service complète."
+    },
+    "s4": {
+      "title": "Suivi & maintenance",
+      "desc": "Monitoring continu, nettoyage et interventions rapides pour une production optimale."
+    }
+  },
+  "ctaBanner": {
+    "badge": "Énergie Solaire · Maroc",
+    "title1": "Votre énergie solaire",
+    "title2": "commence aujourd'hui.",
+    "subtitle": "Rejoignez les 300+ familles qui ont réduit leur facture de 70%. Devis gratuit, réponse sous 24h.",
+    "feature1": "4–7 ans de retour sur investissement",
+    "feature2": "300+ familles satisfaites",
+    "feature3": "Garantie 10 ans",
+    "cardTitle": "Devis gratuit en 24h",
+    "cardDesc": "Sans engagement. Notre équipe vous répond rapidement.",
+    "cardButton": "Contacter sur WhatsApp",
+    "location": "Tout le Maroc",
+    "hours": "Lun–Sam 9h–18h"
+  },
   "vision": {
     "badge": "Notre vision",
     "title": "Un Maroc 100% renouvelable",
@@ -81,7 +140,15 @@
     "impact1Label": "Projets réalisés",
     "impact2Label": "Familles aidées",
     "impact3Label": "Tonnes CO₂ évitées",
+    "impact4Suffix": " ans",
+    "impact4Label": "De garantie",
     "emotionalLine": "Une goutte d'eau n'éteint pas un feu — mais des millions de gouttes créent un océan. Ensemble, nous sommes cet océan.",
+    "pillarsLabel": "Nos piliers",
+    "goalsLabel": "Objectifs 2026",
+    "goal1": "Installations solaires réalisées",
+    "goal2": "Familles en autonomie énergétique",
+    "goal3": "Réduction CO₂ annuelle",
+    "goal4": "Couverture régions du Maroc",
     "pillars": {
       "innovation": {
         "title": "Innovation",
@@ -119,7 +186,14 @@
     "manager": "Oussama AGDID",
     "phone": "+212 636 227 511",
     "company": "Goutte d'Espoir",
-    "sector": "Énergie Solaire"
+    "sector": "Énergie Solaire",
+    "managerLabel": "Responsable",
+    "phoneLabel": "Téléphone",
+    "orgLabel": "Organisation",
+    "sectorLabel": "Secteur d'activité",
+    "waLabel": "Whatsapp · Direct",
+    "waTitle": "Répondons à vos questions",
+    "waOnline": "En ligne · Réponse rapide"
   },
   "testimonials": {
     "title": "Ce que disent nos clients",

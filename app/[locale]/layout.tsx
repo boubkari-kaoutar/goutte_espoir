@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -8,18 +8,14 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import PageLoader from '@/components/PageLoader';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import '../globals.css';
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-outfit',
   display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -27,6 +23,10 @@ export const metadata: Metadata = {
   description:
     "Organisation marocaine engagée pour les énergies renouvelables, la protection de l'environnement et le développement communautaire durable.",
   keywords: ['énergie solaire', 'renouvelable', 'Maroc', 'durabilité', 'environnement'],
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: "Goutte d'Espoir",
     description: "Construisons un avenir durable ensemble.",
@@ -55,7 +55,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRTL ? 'rtl' : 'ltr'}
-      className={`${inter.variable} ${playfair.variable} light`}
+      className={`${outfit.variable} light`}
     >
       <body className="bg-white text-gray-900 antialiased">
         <NextIntlClientProvider messages={messages}>
@@ -66,6 +66,7 @@ export default async function LocaleLayout({
               {children}
             </main>
             <Footer />
+            <FloatingWhatsApp />
           </SmoothScroll>
         </NextIntlClientProvider>
       </body>
