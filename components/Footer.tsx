@@ -33,7 +33,7 @@ export default function Footer() {
         {/* Col 1 — Brand */}
         <div className="lg:col-span-1">
           <div className={`flex items-center gap-3 mb-5 ${isRTL ? 'flex-row-reverse' : ''}`}>
-            <div className="relative w-9 h-9 flex-shrink-0">
+            <div className="relative w-16 h-16 flex-shrink-0">
               <Image src="/logo.png" alt="Goutte d'Espoir" fill className="object-contain" />
             </div>
             <div>
