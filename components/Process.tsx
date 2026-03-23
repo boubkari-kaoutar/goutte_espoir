@@ -171,15 +171,6 @@ export default function Process() {
                       <div className={`mt-5 w-10 h-0.5 rounded-full ${isRTL ? 'ml-auto' : ''}`} style={{ background: color }} />
                     </div>
                   )}
-                  {/* Mobile fallback for left steps */}
-                  {!effectiveRight && (
-                    <div className="lg:hidden py-8 max-w-md">
-                      <h3 className="font-display font-black leading-tight mb-3" style={{ fontSize: '1.4rem', color }}>
-                        {t(`${key}.title`)}
-                      </h3>
-                      <p className="text-gray-400 text-[14px] leading-relaxed font-light">{t(`${key}.desc`)}</p>
-                    </div>
-                  )}
                 </div>
 
               </div>

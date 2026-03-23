@@ -98,12 +98,10 @@ export default function Hero() {
 
             <div ref={ctaRef} className={`mt-9 flex items-center gap-4 flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>
               <Link href="/services"
-                className={`group inline-flex items-center gap-2.5 rounded-lg text-white text-sm font-semibold px-6 py-3 transition-opacity duration-200 hover:opacity-90 ${isRTL ? 'flex-row-reverse' : ''}`}
+                className="group relative overflow-hidden inline-flex items-center rounded-lg text-white text-sm font-semibold px-6 py-3"
                 style={{ background: '#26ab52' }}>
-                {t('cta')}
-                <svg className={`w-4 h-4 transition-transform duration-200 ${isRTL ? 'rotate-180 group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out" style={{ background: '#0d5e2a' }} />
+                <span className="relative z-10">{t('cta')}</span>
               </Link>
               <Link href="/about"
                 className="group inline-flex items-center gap-1.5 text-white/70 text-sm font-medium hover:text-white transition-colors duration-200">
