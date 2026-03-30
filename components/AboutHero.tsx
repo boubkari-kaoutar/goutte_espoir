@@ -14,10 +14,10 @@ export default function AboutHero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1600&q=80"
+          src="/about.png"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.38 }}
+          style={{ opacity: 0.6 }}
         />
         <div
           className="absolute inset-0"
@@ -25,34 +25,24 @@ export default function AboutHero() {
         />
       </div>
 
-      {/* SCROLL indicator */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3">
-        <div className="w-px h-14 bg-white/15" />
-        <span
-          className="text-white/25 text-[9px] tracking-[0.35em] uppercase font-semibold"
-          style={{ writingMode: 'vertical-rl' }}>
-          SCROLL
-        </span>
-      </div>
-
       {/* Main content */}
       <div className={`relative z-10 px-6 sm:px-12 lg:px-20 pb-20 pt-44 ${isRTL ? 'text-right' : ''}`}>
 
-        {/* Location label */}
-        <div className={`flex items-center gap-3 mb-10 ${isRTL ? 'flex-row-reverse' : ''}`}>
-          <div className="w-8 h-px" style={{ background: '#26ab52' }} />
-          <span className="text-white/50 text-[11px] tracking-[0.28em] uppercase font-semibold">
-            {t('location')}
-          </span>
-        </div>
-
         {/* Headline block */}
         <h1
-          className="font-display font-black leading-[1.0] tracking-tight mb-16"
-          style={{ fontSize: 'clamp(3.2rem, 8.5vw, 8rem)' }}>
+          className="font-display font-black leading-[1.0] tracking-tight mb-6"
+          style={{ fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)' }}>
           <span className="text-white block">{t('discover')}</span>
           <span className="block" style={{ color: '#26ab52' }}>{t('brand')}</span>
         </h1>
+
+        {/* Description */}
+        <p className="text-white/70 font-light leading-relaxed mb-14 max-w-xl"
+          style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.05rem)' }}>
+          {isRTL
+            ? 'منظمة مغربية رائدة في مجال الطاقة الشمسية، نُرافق الأفراد والشركات نحو استقلالية طاقية مستدامة — بشفافية، خبرة، والتزام حقيقي.'
+            : "Organisation marocaine pionnière dans le solaire, nous accompagnons particuliers et entreprises vers une autonomie énergétique durable — avec transparence, expertise et engagement réel."}
+        </p>
 
         {/* CTAs */}
         <div className={`flex items-center gap-8 flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>

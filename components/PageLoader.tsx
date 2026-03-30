@@ -11,7 +11,6 @@ export default function PageLoader() {
   const textRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
-  const raysRef = useRef<HTMLDivElement>(null);
   const dotsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,14 +18,10 @@ export default function PageLoader() {
       const tl = gsap.timeline();
 
       // Entrance
-      tl.fromTo(raysRef.current, { opacity: 0, rotate: -30 }, { opacity: 1, rotate: 0, duration: 0.8, ease: 'power2.out' }, 0)
-        .fromTo(logoRef.current, { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, 0.2)
+      tl.fromTo(logoRef.current, { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, 0.2)
         .fromTo(textRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, 0.6)
         .fromTo(progressRef.current, { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.8)
         .to(progressBarRef.current, { width: '100%', duration: 1.4, ease: 'power1.inOut' }, 0.9);
-
-      // Rays spin continuously
-      gsap.to(raysRef.current, { rotate: 360, duration: 8, repeat: -1, ease: 'none' });
 
       // Fade out
       tl.to(textRef.current, { y: -10, opacity: 0, duration: 0.4, ease: 'power2.in' }, 2.4)
@@ -67,30 +62,6 @@ export default function PageLoader() {
           background: 'radial-gradient(circle, rgba(7,98,210,0.1) 0%, transparent 70%)',
           filter: 'blur(60px)', borderRadius: '50%' }}
       />
-
-      {/* Solar rays ring */}
-      <div ref={raysRef} className="absolute w-64 h-64 pointer-events-none" style={{ opacity: 0 }}>
-        {Array.from({ length: 12 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute top-1/2 left-1/2 origin-left"
-            style={{
-              width: '50%',
-              height: '2px',
-              transform: `rotate(${i * 30}deg) translateY(-50%)`,
-            }}
-          >
-            <div
-              className="h-full rounded-full"
-              style={{
-                background: `linear-gradient(90deg, transparent 0%, ${i % 2 === 0 ? '#26ab52' : '#74d1fa'}40 50%, transparent 100%)`,
-                width: i % 3 === 0 ? '80%' : '60%',
-                marginLeft: 'auto',
-              }}
-            />
-          </div>
-        ))}
-      </div>
 
       {/* Logo */}
       <div ref={logoRef} className="relative w-24 h-24 z-10" style={{ opacity: 0 }}>

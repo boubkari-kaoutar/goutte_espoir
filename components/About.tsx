@@ -9,9 +9,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: '50+',  label: 'stat1', color: '#26ab52' },
-  { value: '300+', label: 'stat2', color: '#0762d2' },
-  { value: '120T', label: 'stat3', color: '#a3d42a' },
+  { value: '25+',  label: 'stat1', color: '#26ab52' },
+  { value: '150+', label: 'stat2', color: '#0762d2' },
+  { value: '60T',  label: 'stat3', color: '#a3d42a' },
 ];
 
 const symbols = [

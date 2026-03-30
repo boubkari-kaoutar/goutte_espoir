@@ -15,10 +15,10 @@ export default function ImpactBanner() {
   const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   const items = [
-    { value: 50,  suffix: '+',          label: t('impact1Label'), color: '#26ab52' },
-    { value: 300, suffix: '+',          label: t('impact2Label'), color: '#0762d2' },
-    { value: 120, suffix: 'T',          label: t('impact3Label'), color: '#a3d42a' },
-    { value: 10,  suffix: t('impact4Suffix'), label: t('impact4Label'), color: '#74d1fa' },
+    { value: 25,  suffix: '+',          label: t('impact1Label'), color: '#26ab52' },
+    { value: 150, suffix: '+',          label: t('impact2Label'), color: '#0762d2' },
+    { value: 60,  suffix: 'T',          label: t('impact3Label'), color: '#a3d42a' },
+    { value: 5,   suffix: t('impact4Suffix'), label: t('impact4Label'), color: '#74d1fa' },
   ];
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -56,6 +56,12 @@ export default function Contact() {
   const isRTL = locale === 'ar';
   const c = isRTL ? s.ar : s.fr;
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
@@ -88,16 +94,6 @@ export default function Contact() {
   return (
     <section id="contact" ref={sectionRef} className="relative bg-white overflow-hidden">
 
-      {/* Section header */}
-      <div className={`border-b border-gray-100 px-8 sm:px-14 lg:px-20 pt-24 pb-6 flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
-        <div className={`flex items-center gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
-<span className="text-gray-400 text-xs tracking-[0.25em] uppercase font-medium">{t('badge')}</span>
-        </div>
-        <div className={`hidden sm:flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-          <span className="text-gray-400 text-[10px] tracking-[0.2em] uppercase font-medium">{t('replyTime')}</span>
-        </div>
-      </div>
 
       {/* ── COORDONNÉES SECTION ── */}
       <div className="border-b border-gray-100 bg-gray-50/50">
@@ -227,34 +223,40 @@ export default function Contact() {
             </div>
 
             <form
-              onSubmit={(e) => { e.preventDefault(); window.open('https://wa.me/212636227511', '_blank'); }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                const text = isRTL
+                  ? `الاسم: ${name}\nالهاتف: ${phone}\nالبريد: ${email}\nالموضوع: ${subject}\nالرسالة: ${message}`
+                  : `Nom: ${name}\nTél: ${phone}\nEmail: ${email}\nSujet: ${subject}\nMessage: ${message}`;
+                window.open(`https://wa.me/212636227511?text=${encodeURIComponent(text)}`, '_blank');
+              }}
               className="flex flex-col gap-5">
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{c.nameLabel}</label>
-                  <input type="text" placeholder={c.namePh} className={inputCls} />
+                  <input type="text" placeholder={c.namePh} className={inputCls} value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{c.emailLabel}</label>
-                  <input type="email" placeholder={c.emailPh} className={inputCls} />
+                  <input type="email" placeholder={c.emailPh} className={inputCls} value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{c.phoneLabel}</label>
-                  <input type="tel" placeholder={c.phonePh} className={inputCls} dir="ltr" />
+                  <input type="tel" placeholder={c.phonePh} className={inputCls} dir="ltr" value={phone} onChange={(e) => setPhone(e.target.value)} />
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{c.subjectLabel}</label>
-                  <input type="text" placeholder={c.subjectPh} className={inputCls} />
+                  <input type="text" placeholder={c.subjectPh} className={inputCls} value={subject} onChange={(e) => setSubject(e.target.value)} />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1.5">
                 <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{c.msgLabel}</label>
-                <textarea rows={4} placeholder={c.msgPh} className={`${inputCls} resize-none`} />
+                <textarea rows={4} placeholder={c.msgPh} className={`${inputCls} resize-none`} value={message} onChange={(e) => setMessage(e.target.value)} />
               </div>
 
               <button type="submit"

@@ -16,9 +16,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const isRTL = locale === 'ar';
 
-  /* Transparent mode only on home page */
-  const isHome = pathname === '/';
-  const isTransparent = isHome && !scrolled;
+  /* Pages with dark hero — navbar transparent + white text */
+  const darkHeroPages = ['/', '/about', '/services'];
+  const isDarkPage = darkHeroPages.includes(pathname);
+  const isTransparent = isDarkPage && !scrolled;
 
   const navLinks = [
     { key: 'home',     href: '/' },
@@ -48,8 +49,8 @@ export default function Navbar() {
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isTransparent
-          ? 'py-5 backdrop-blur-sm'
-          : 'bg-white/97 backdrop-blur-md border-b border-gray-100/80 py-3.5'
+          ? 'py-2 backdrop-blur-sm'
+          : 'bg-white/97 backdrop-blur-md border-b border-gray-100/80 py-2'
       }`}
       style={{
         boxShadow: isTransparent ? 'none' : '0 1px 24px rgba(0,0,0,0.07)',
@@ -59,21 +60,9 @@ export default function Navbar() {
       <div className={`px-6 sm:px-12 lg:px-20 flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`} dir="ltr">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-          <div className="relative w-9 h-9 flex-shrink-0">
+        <Link href="/" className="flex items-center flex-shrink-0">
+          <div className="relative w-12 h-12 flex-shrink-0" style={{ transform: 'scale(1.6)', transformOrigin: 'left center' }}>
             <Image src="/logo.png" alt="Goutte d'Espoir" fill className="object-contain" priority />
-          </div>
-          <div className="hidden sm:block">
-            <div className={`font-display font-black text-[15px] leading-none transition-colors duration-300 ${
-              isTransparent ? 'text-white' : 'text-gray-900'
-            }`}>
-              Goutte <span style={{ color: '#26ab52' }}>d&apos;Espoir</span>
-            </div>
-            <div className={`text-[10px] font-medium tracking-[0.18em] uppercase mt-0.5 transition-colors duration-300 ${
-              isTransparent ? 'text-white/55' : 'text-gray-400'
-            }`}>
-              Énergie Solaire
-            </div>
           </div>
         </Link>
 
@@ -81,7 +70,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           {(isRTL ? [...navLinks].reverse() : navLinks).map(({ key, href }) => (
             <Link key={key} href={href}
-              className={`relative text-[13px] font-semibold transition-colors duration-200 whitespace-nowrap ${
+              className={`relative text-[15px] font-semibold transition-colors duration-200 whitespace-nowrap ${
                 isActive(href)
                   ? 'text-[#26ab52]'
                   : isTransparent

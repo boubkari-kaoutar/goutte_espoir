@@ -15,9 +15,9 @@ const pillars = [
 ];
 
 const counters = [
-  { value: 50,  suffix: '+', key: 'impact1Label', color: '#26ab52' },
-  { value: 300, suffix: '+', key: 'impact2Label', color: '#0762d2' },
-  { value: 120, suffix: 'T', key: 'impact3Label', color: '#a3d42a' },
+  { value: 25,  suffix: '+', key: 'impact1Label', color: '#26ab52' },
+  { value: 150, suffix: '+', key: 'impact2Label', color: '#0762d2' },
+  { value: 60,  suffix: 'T', key: 'impact3Label', color: '#a3d42a' },
 ];
 
 const goalKeys = ['goal1', 'goal2', 'goal3', 'goal4'] as const;
