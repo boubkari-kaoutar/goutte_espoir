@@ -36,7 +36,7 @@ export default function Navbar() {
         { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.1 }
       );
     });
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => setScrolled(window.scrollY > 500);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => { window.removeEventListener('scroll', handleScroll); ctx.revert(); };
   }, []);
