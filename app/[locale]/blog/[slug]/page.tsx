@@ -5,7 +5,10 @@ import ArticleStyles from '@/components/ArticleStyles';
 import { blogArticles } from '@/lib/blogData';
 
 export async function generateStaticParams() {
-  return blogArticles.map((a) => ({ slug: a.slug }));
+  const locales = ['fr', 'ar'];
+  return locales.flatMap((locale) =>
+    blogArticles.map((a) => ({ locale, slug: a.slug }))
+  );
 }
 
 export default async function ArticlePage({
