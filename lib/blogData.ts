@@ -32,7 +32,7 @@ export const blogArticles: Article[] = [
       tag: 'Guide pratique',
       title: 'Comment choisir la bonne puissance pour votre installation solaire ?',
       excerpt: 'Dimensionner correctement son système photovoltaïque est la clé d\'un retour sur investissement optimal.',
-      date: '15 Jan 2025',
+      date: '15 Jan 2026',
       readTime: '5',
       author: 'Équipe Goutte d\'Espoir',
       content: `
@@ -65,7 +65,7 @@ export const blogArticles: Article[] = [
       tag: 'دليل عملي',
       title: 'كيف تختار القدرة المناسبة لتركيبك الشمسي؟',
       excerpt: 'تحديد حجم المنظومة الكهروضوئية هو مفتاح العائد الأمثل على الاستثمار.',
-      date: '15 يناير 2025',
+      date: '15 يناير 2026',
       readTime: '5',
       author: 'فريق قطرة أمل',
       content: `
@@ -101,7 +101,7 @@ export const blogArticles: Article[] = [
       tag: 'Environnement',
       title: "Énergie solaire et économies d'eau : le duo gagnant pour le Maroc",
       excerpt: "Au-delà de l'électricité, le solaire offre des solutions concrètes pour la gestion durable de l'eau.",
-      date: '28 Jan 2025',
+      date: '28 Jan 2026',
       readTime: '4',
       author: "Équipe Goutte d'Espoir",
       content: `
@@ -131,7 +131,7 @@ export const blogArticles: Article[] = [
       tag: 'بيئة',
       title: "الطاقة الشمسية وتوفير المياه: ثنائي رابح للمغرب",
       excerpt: "يقدم الطاقة الشمسية حلولاً ملموسة لإدارة المياه المستدامة في المناطق القروية والزراعية.",
-      date: '28 يناير 2025',
+      date: '28 يناير 2026',
       readTime: '4',
       author: 'فريق قطرة أمل',
       content: `
@@ -153,18 +153,18 @@ export const blogArticles: Article[] = [
     },
   },
   {
-    slug: 'aides-subventions-solaire-maroc-2025',
+    slug: 'aides-subventions-solaire-maroc-2026',
     color: '#a3d42a',
     image: '/images/blog/a3.png',
     fr: {
       tag: 'Financement',
-      title: 'Aides et subventions disponibles pour le solaire au Maroc en 2025',
+      title: 'Aides et subventions disponibles pour le solaire au Maroc en 2026',
       excerpt: 'Le gouvernement marocain et plusieurs organismes proposent des aides pour faciliter la transition solaire.',
-      date: '10 Fév 2025',
+      date: '10 Fév 2026',
       readTime: '6',
       author: "Équipe Goutte d'Espoir",
       content: `
-        <p class="lead-paragraph">Le gouvernement marocain et plusieurs organismes proposent des aides pour faciliter la transition vers l'énergie solaire. En 2025, plusieurs dispositifs sont disponibles pour réduire significativement le coût de votre installation photovoltaïque.</p>
+        <p class="lead-paragraph">Le gouvernement marocain et plusieurs organismes proposent des aides pour faciliter la transition vers l'énergie solaire. En 2026, plusieurs dispositifs sont disponibles pour réduire significativement le coût de votre installation photovoltaïque.</p>
 
         <h2>Le Programme National pour l'Efficacité Énergétique</h2>
         <p>L'AMEE (Agence Marocaine pour l'Efficacité Énergétique) pilote plusieurs programmes d'aide à la transition énergétique. Ces programmes ciblent notamment les ménages à revenus modestes, les coopératives agricoles et les collectivités territoriales.</p>
@@ -191,13 +191,13 @@ export const blogArticles: Article[] = [
     },
     ar: {
       tag: 'تمويل',
-      title: 'المساعدات والدعم المتاحة للطاقة الشمسية في المغرب 2025',
+      title: 'المساعدات والدعم المتاحة للطاقة الشمسية في المغرب 2026',
       excerpt: 'الحكومة المغربية وعدة هيئات تقدم مساعدات لتسهيل التحول نحو الطاقة الشمسية.',
-      date: '10 فبراير 2025',
+      date: '10 فبراير 2026',
       readTime: '6',
       author: 'فريق قطرة أمل',
       content: `
-        <p class="lead-paragraph">تقدم الحكومة المغربية وعدة هيئات مساعدات لتسهيل التحول نحو الطاقة الشمسية. في عام 2025، تتوفر عدة آليات لتخفيض تكلفة تركيبك الكهروضوئي بشكل كبير.</p>
+        <p class="lead-paragraph">تقدم الحكومة المغربية وعدة هيئات مساعدات لتسهيل التحول نحو الطاقة الشمسية. في عام 2026، تتوفر عدة آليات لتخفيض تكلفة تركيبك الكهروضوئي بشكل كبير.</p>
 
         <h2>البرنامج الوطني للكفاءة الطاقية</h2>
         <p>تُشرف الوكالة المغربية للكفاءة الطاقية على عدة برامج دعم للتحول الطاقي. تستهدف هذه البرامج الأسر ذات الدخل المحدود والتعاونيات الزراعية والجماعات الترابية بشكل خاص.</p>
@@ -223,7 +223,7 @@ export const blogArticles: Article[] = [
       tag: 'Technologie',
       title: 'Panneaux monocristallins vs polycristallins : lequel choisir ?',
       excerpt: 'Comprendre les différences techniques entre ces deux technologies pour faire le bon choix.',
-      date: '22 Fév 2025',
+      date: '22 Fév 2026',
       readTime: '5',
       author: "Équipe Goutte d'Espoir",
       content: `
@@ -257,7 +257,7 @@ export const blogArticles: Article[] = [
       tag: 'تكنولوجيا',
       title: 'ألواح أحادية البلورة مقابل متعددة البلورة: أيهما تختار؟',
       excerpt: 'فهم الفروق التقنية بين هاتين التقنيتين لاتخاذ القرار الصحيح.',
-      date: '22 فبراير 2025',
+      date: '22 فبراير 2026',
       readTime: '5',
       author: 'فريق قطرة أمل',
       content: `
@@ -287,7 +287,7 @@ export const blogArticles: Article[] = [
       tag: 'Témoignage',
       title: "Comment une coopérative agricole a réduit ses coûts de 75% grâce au solaire",
       excerpt: "Retour d'expérience concret sur l'installation de 20 kWc pour une coopérative agricole près de Marrakech.",
-      date: '5 Mar 2025',
+      date: '5 Mar 2026',
       readTime: '7',
       author: "Équipe Goutte d'Espoir",
       content: `
@@ -317,7 +317,7 @@ export const blogArticles: Article[] = [
       tag: 'شهادة',
       title: 'كيف خفّضت تعاونية زراعية تكاليفها 75% بالطاقة الشمسية',
       excerpt: 'تجربة ملموسة لتركيب 20 كيلوواط لتعاونية زراعية قرب مراكش.',
-      date: '5 مارس 2025',
+      date: '5 مارس 2026',
       readTime: '7',
       author: 'فريق قطرة أمل',
       content: `
@@ -346,7 +346,7 @@ export const blogArticles: Article[] = [
       tag: 'Entretien',
       title: '5 gestes simples pour maintenir votre installation solaire en parfait état',
       excerpt: 'Un entretien régulier garantit la longévité et la performance de vos panneaux.',
-      date: '18 Mar 2025',
+      date: '18 Mar 2026',
       readTime: '3',
       author: "Équipe Goutte d'Espoir",
       content: `
@@ -379,7 +379,7 @@ export const blogArticles: Article[] = [
       tag: 'صيانة',
       title: '5 خطوات بسيطة للحفاظ على تركيبك الشمسي في حالة مثالية',
       excerpt: 'الصيانة المنتظمة تضمن طول عمر وأداء ألواحك الشمسية.',
-      date: '18 مارس 2025',
+      date: '18 مارس 2026',
       readTime: '3',
       author: 'فريق قطرة أمل',
       content: `
