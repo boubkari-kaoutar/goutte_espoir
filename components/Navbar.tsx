@@ -18,15 +18,17 @@ export default function Navbar() {
 
   /* Pages with dark hero — navbar transparent + white text */
   const darkHeroPages = ['/', '/about', '/services'];
-  const isDarkPage = darkHeroPages.includes(pathname);
+  const isDarkPage = darkHeroPages.includes(pathname) || pathname.startsWith('/blog/');
   const isTransparent = isDarkPage && !scrolled;
 
   const navLinks = [
-    { key: 'home',     href: '/' },
-    { key: 'about',    href: '/about' },
-    { key: 'services', href: '/services' },
-    { key: 'vision',   href: '/vision' },
-    { key: 'contact',  href: '/contact' },
+    { key: 'home',      href: '/' },
+    { key: 'about',     href: '/about' },
+    { key: 'services',  href: '/services' },
+    { key: 'vision',    href: '/vision' },
+    { key: 'blog',      href: '/blog' },
+    { key: 'boutique',  href: '/boutique' },
+    { key: 'contact',   href: '/contact' },
   ];
 
   useEffect(() => {

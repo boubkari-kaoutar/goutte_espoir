@@ -4,6 +4,8 @@
     "about": "À propos",
     "services": "Services",
     "vision": "Vision",
+    "blog": "Blog",
+    "boutique": "Boutique",
     "contact": "Contact",
     "cta": "Devis gratuit"
   },
@@ -89,7 +91,84 @@
       "desc": "Contrats d'entretien préventif, nettoyage des panneaux, diagnostics à distance et interventions rapides. Votre installation produit à son plein potentiel, chaque jour.",
       "features": ["Maintenance préventive", "Diagnostic à distance", "Intervention rapide"]
     },
+    "water": {
+      "tagline": "L'eau propre, une ressource à protéger.",
+      "title": "Traitement de l'eau",
+      "desc": "Solutions solaires pour le pompage, la filtration et le traitement de l'eau potable. Des systèmes autonomes et durables adaptés aux zones rurales et aux besoins agricoles.",
+      "features": ["Pompage solaire", "Filtration et purification", "Solutions hors-réseau"]
+    },
+    "heater": {
+      "tagline": "L'énergie du soleil pour chauffer votre eau.",
+      "title": "Chauffe-eau Solaire",
+      "desc": "Systèmes de chauffe-eau solaires thermiques pour usage résidentiel et collectif. Réduisez votre facture d'électricité jusqu'à 80% sur la production d'eau chaude sanitaire.",
+      "features": ["Économies jusqu'à 80%", "Installation rapide", "Adapté maison & collectif"]
+    },
     "learnMore": "En savoir plus"
+  },
+  "blog": {
+    "badge": "Nos articles",
+    "title": "Savoir & Solaire",
+    "title2": "notre blog.",
+    "subtitle": "Conseils, analyses et actualités sur l'énergie solaire au Maroc.",
+    "readMore": "Lire l'article",
+    "minRead": "min de lecture",
+    "a1": {
+      "tag": "Guide pratique",
+      "title": "Comment choisir la bonne puissance pour votre installation solaire ?",
+      "excerpt": "Dimensionner correctement son système photovoltaïque est la clé d'un retour sur investissement optimal. Voici les critères essentiels à prendre en compte.",
+      "date": "15 Jan 2025",
+      "readTime": "5"
+    },
+    "a2": {
+      "tag": "Environnement",
+      "title": "Énergie solaire et économies d'eau : le duo gagnant pour le Maroc",
+      "excerpt": "Au-delà de l'électricité, le solaire offre des solutions concrètes pour la gestion durable de l'eau dans les zones rurales et agricoles marocaines.",
+      "date": "28 Jan 2025",
+      "readTime": "4"
+    },
+    "a3": {
+      "tag": "Financement",
+      "title": "Aides et subventions disponibles pour le solaire au Maroc en 2025",
+      "excerpt": "Le gouvernement marocain et plusieurs organismes proposent des aides pour faciliter la transition vers l'énergie solaire. Tout ce qu'il faut savoir.",
+      "date": "10 Fév 2025",
+      "readTime": "6"
+    },
+    "a4": {
+      "tag": "Technologie",
+      "title": "Panneaux monocristallins vs polycristallins : lequel choisir ?",
+      "excerpt": "Comprendre les différences techniques entre ces deux technologies pour faire le bon choix selon votre budget et votre emplacement géographique.",
+      "date": "22 Fév 2025",
+      "readTime": "5"
+    },
+    "a5": {
+      "tag": "Témoignage",
+      "title": "Comment une coopérative agricole a réduit ses coûts de 75% grâce au solaire",
+      "excerpt": "Retour d'expérience concret sur l'installation de 20 kWc pour une coopérative agricole près de Marrakech. Chiffres et enseignements.",
+      "date": "5 Mar 2025",
+      "readTime": "7"
+    },
+    "a6": {
+      "tag": "Entretien",
+      "title": "5 gestes simples pour maintenir votre installation solaire en parfait état",
+      "excerpt": "Un entretien régulier garantit la longévité et la performance de vos panneaux. Nos techniciens partagent leurs conseils pratiques.",
+      "date": "18 Mar 2025",
+      "readTime": "3"
+    }
+  },
+  "boutique": {
+    "badge": "Notre catalogue",
+    "title": "Équipements",
+    "title2": "solaires.",
+    "subtitle": "Matériel certifié, sélectionné par nos ingénieurs pour fiabilité et performance.",
+    "contact": "Demander un devis",
+    "inStock": "En stock",
+    "outOfStock": "Sur commande",
+    "p1": { "name": "Panneau Monocristallin 400Wc", "category": "Panneaux solaires", "desc": "Panneau haute performance, rendement 21%, cadre aluminium anodisé, garantie 25 ans.", "price": "À partir de 1 200 DH" },
+    "p2": { "name": "Onduleur Hybride 5kW", "category": "Onduleurs", "desc": "Onduleur hybride avec gestion batterie intégrée, monitoring Wi-Fi en temps réel.", "price": "À partir de 4 500 DH" },
+    "p3": { "name": "Batterie Lithium 100Ah", "category": "Stockage", "desc": "Batterie LiFePO4 longue durée, 4000+ cycles, compatible tous onduleurs hybrides.", "price": "À partir de 5 800 DH" },
+    "p4": { "name": "Kit Chauffe-eau 200L", "category": "Chauffe-eau solaire", "desc": "Kit complet chauffe-eau solaire thermique 200L, idéal pour famille de 4 personnes.", "price": "À partir de 6 000 DH" },
+    "p5": { "name": "Pompe Solaire Immergée", "category": "Pompage solaire", "desc": "Pompe DC solaire immergée 0.75kW, débit 3 m³/h, compatible avec alimentation directe panneau.", "price": "À partir de 3 200 DH" },
+    "p6": { "name": "Structure de Montage Toiture", "category": "Accessoires", "desc": "Système de fixation aluminium universel, compatible tous types de toitures, pose rapide.", "price": "À partir de 800 DH" }
   },
   "process": {
     "sectionBadge": "Comment ça marche",

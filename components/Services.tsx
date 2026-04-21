@@ -43,6 +43,28 @@ function getServices(isRTL: boolean) {
         { value: '100%', label: isRTL ? 'مراقبة إلكترونية' : 'suivi en ligne' },
       ],
     },
+    {
+      key: 'water',
+      number: '04',
+      color: '#74d1fa',
+      image: '/Traitement%20de%20l%27eau.png',
+      stats: [
+        { value: '100%', label: isRTL ? 'مستقل' : 'autonome' },
+        { value: '0 DH', label: isRTL ? 'تكاليف التشغيل' : 'coût énergie' },
+        { value: '24h', label: isRTL ? 'مياه نظيفة' : 'eau propre' },
+      ],
+    },
+    {
+      key: 'heater',
+      number: '05',
+      color: '#f97316',
+      image: '/Chauffe-eau%20Solaire.png',
+      stats: [
+        { value: '−80%', label: isRTL ? 'توفير الكهرباء' : 'économies élec.' },
+        { value: '15 ans', label: isRTL ? 'عمر المنتج' : 'de durée de vie' },
+        { value: '1 jour', label: isRTL ? 'التركيب' : "d'installation" },
+      ],
+    },
   ];
 }
 
