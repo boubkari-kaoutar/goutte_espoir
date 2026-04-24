@@ -50,20 +50,20 @@
     "logoSubtitle": "Notre logo raconte une histoire avant même de lire notre nom.",
     "description": "Goutte d'Espoir est une organisation marocaine engagée dans la promotion des énergies renouvelables et la sensibilisation à la préservation de l'environnement. Chaque action, si petite soit-elle, contribue à un futur plus vert.",
     "drop": {
-      "title": "La goutte d'eau",
-      "desc": "Symbole de vie et de ressources naturelles précieuses, qui nous rappelle que tout est lié."
+      "title": "La goutte d'eau stylisée",
+      "desc": "Une feuille verte avec une jeune pousse en son cœur, symbolisant l'harmonie entre l'eau et la nature."
     },
     "hands": {
-      "title": "Les mains vertes",
-      "desc": "La protection active de notre environnement, le geste concret face aux défis climatiques."
+      "title": "Les panneaux solaires",
+      "desc": "À l'intérieur de la goutte, ils évoquent les énergies renouvelables et l'innovation durable."
     },
     "energy": {
-      "title": "Panneaux & Éoliennes",
-      "desc": "L'énergie renouvelable comme moteur du changement — propre, durable et inépuisable."
+      "title": "L'orbite",
+      "desc": "Entoure l'élément central et suggère le mouvement, la protection et un cycle écologique maîtrisé."
     },
     "community": {
-      "title": "Les silhouettes humaines",
-      "desc": "La communauté au cœur de tout. Parce que la vraie énergie, c'est la solidarité."
+      "title": "La typographie",
+      "desc": "Le bleu symbolise la pureté et l'eau, le vert incarne la nature et la croissance durable."
     },
     "stat1": "Projets réalisés",
     "stat2": "Familles aidées",

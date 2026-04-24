@@ -17,8 +17,8 @@ const stats = [
 const symbols = [
   { key: 'drop',      number: '01', color: '#31b6e7' },
   { key: 'hands',     number: '02', color: '#327700' },
-  { key: 'energy',    number: '03', color: '#16390d' },
-  { key: 'community', number: '04', color: '#1c0b64' },
+  { key: 'energy',    number: '03', color: '#1c0b64' },
+  { key: 'community', number: '04', color: '#16390d' },
 ];
 
 export default function About() {
