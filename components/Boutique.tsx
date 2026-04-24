@@ -9,12 +9,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const products = [
-  { key: 'p1', color: '#26ab52', stock: true,  image: '/images/shop/p1.png' },
-  { key: 'p2', color: '#0762d2', stock: true,  image: '/images/shop/p2.png' },
-  { key: 'p3', color: '#a3d42a', stock: false, image: '/images/shop/p3.png' },
+  { key: 'p1', color: '#327700', stock: true,  image: '/images/shop/p1.png' },
+  { key: 'p2', color: '#1c0b64', stock: true,  image: '/images/shop/p2.png' },
+  { key: 'p3', color: '#16390d', stock: false, image: '/images/shop/p3.png' },
   { key: 'p4', color: '#f97316', stock: true,  image: '/images/shop/p4.png' },
-  { key: 'p5', color: '#74d1fa', stock: true,  image: '/images/shop/p5.png' },
-  { key: 'p6', color: '#26ab52', stock: true,  image: '/images/shop/p6.png' },
+  { key: 'p5', color: '#31b6e7', stock: true,  image: '/images/shop/p5.png' },
+  { key: 'p6', color: '#327700', stock: true,  image: '/images/shop/p6.png' },
 ];
 
 export default function Boutique() {
@@ -45,7 +45,7 @@ export default function Boutique() {
         <div className="mt-3">
           <h1 className="font-display font-black text-gray-950 leading-tight tracking-tight"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-            {t('title')} <span style={{ color: '#26ab52' }}>{t('title2')}</span>
+            {t('title')} <span style={{ color: '#327700' }}>{t('title2')}</span>
           </h1>
         </div>
         <p className="text-gray-400 text-[15px] font-light mt-3 max-w-lg">{t('subtitle')}</p>
@@ -64,7 +64,7 @@ export default function Boutique() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               {/* Stock badge */}
               <div className={`absolute top-3 ${isRTL ? 'left-3' : 'right-3'}`}>
-                <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${stock ? 'bg-[#26ab52] text-white' : 'bg-gray-800 text-white'}`}>
+                <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${stock ? 'bg-[#327700] text-white' : 'bg-gray-800 text-white'}`}>
                   {stock ? t('inStock') : t('outOfStock')}
                 </span>
               </div>

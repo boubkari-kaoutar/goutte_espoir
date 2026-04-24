@@ -9,20 +9,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
-  { key: 'innovation',     color: '#26ab52', href: '/pillars/innovation' },
-  { key: 'community',      color: '#0762d2', href: '/pillars/community' },
-  { key: 'sustainability', color: '#a3d42a', href: '/pillars/sustainability' },
+  { key: 'innovation',     color: '#327700', href: '/pillars/innovation' },
+  { key: 'community',      color: '#1c0b64', href: '/pillars/community' },
+  { key: 'sustainability', color: '#16390d', href: '/pillars/sustainability' },
 ];
 
 const counters = [
-  { value: 25,  suffix: '+', key: 'impact1Label', color: '#26ab52' },
-  { value: 150, suffix: '+', key: 'impact2Label', color: '#0762d2' },
-  { value: 60,  suffix: 'T', key: 'impact3Label', color: '#a3d42a' },
+  { value: 25,  suffix: '+', key: 'impact1Label', color: '#327700' },
+  { value: 150, suffix: '+', key: 'impact2Label', color: '#1c0b64' },
+  { value: 60,  suffix: 'T', key: 'impact3Label', color: '#16390d' },
 ];
 
 const goalKeys = ['goal1', 'goal2', 'goal3', 'goal4'] as const;
 const goalPcts  = [68, 54, 80, 42];
-const goalColors = ['#26ab52', '#0762d2', '#a3d42a', '#74d1fa'];
+const goalColors = ['#327700', '#1c0b64', '#16390d', '#31b6e7'];
 
 export default function Vision() {
   const t = useTranslations('vision');
@@ -129,7 +129,7 @@ export default function Vision() {
       {/* Quote */}
       <div ref={quoteRef} className={`px-6 sm:px-12 lg:px-20 py-14 border-t border-b border-gray-100 bg-gray-50/40 ${isRTL ? 'text-right' : ''}`}>
         <div className="max-w-3xl">
-          <div className="text-4xl font-serif text-[#26ab52]/20 leading-none mb-3">&ldquo;</div>
+          <div className="text-4xl font-serif text-[#327700]/20 leading-none mb-3">&ldquo;</div>
           <blockquote className="font-display font-bold text-gray-700 leading-snug"
             style={{ fontSize: 'clamp(1.2rem, 2.2vw, 1.8rem)' }}>
             {t('quote')}

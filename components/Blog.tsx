@@ -10,11 +10,11 @@ import { blogArticles } from '@/lib/blogData';
 gsap.registerPlugin(ScrollTrigger);
 
 const articles = [
-  { key: 'a1', color: '#26ab52', slug: blogArticles[0].slug },
-  { key: 'a2', color: '#0762d2', slug: blogArticles[1].slug },
-  { key: 'a3', color: '#a3d42a', slug: blogArticles[2].slug },
-  { key: 'a4', color: '#74d1fa', slug: blogArticles[3].slug },
-  { key: 'a5', color: '#26ab52', slug: blogArticles[4].slug },
+  { key: 'a1', color: '#327700', slug: blogArticles[0].slug },
+  { key: 'a2', color: '#1c0b64', slug: blogArticles[1].slug },
+  { key: 'a3', color: '#16390d', slug: blogArticles[2].slug },
+  { key: 'a4', color: '#31b6e7', slug: blogArticles[3].slug },
+  { key: 'a5', color: '#327700', slug: blogArticles[4].slug },
   { key: 'a6', color: '#f97316', slug: blogArticles[5].slug },
 ];
 
@@ -46,7 +46,7 @@ export default function Blog() {
         <div className="mt-3">
           <h1 className="font-display font-black text-gray-950 leading-tight tracking-tight"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-            {t('title')} <span style={{ color: '#26ab52' }}>{t('title2')}</span>
+            {t('title')} <span style={{ color: '#327700' }}>{t('title2')}</span>
           </h1>
         </div>
         <p className="text-gray-400 text-[15px] font-light mt-3 max-w-lg">{t('subtitle')}</p>
@@ -91,7 +91,7 @@ export default function Blog() {
               </div>
 
               {/* Title */}
-              <h2 className="font-display font-black text-gray-900 leading-snug text-[18px] group-hover:text-[#26ab52] transition-colors duration-300">
+              <h2 className="font-display font-black text-gray-900 leading-snug text-[18px] group-hover:text-[#327700] transition-colors duration-300">
                 {t(`${key}.title` as Parameters<typeof t>[0])}
               </h2>
 

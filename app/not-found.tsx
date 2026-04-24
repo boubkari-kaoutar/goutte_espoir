@@ -17,7 +17,7 @@ export default function NotFound() {
             fontFamily: 'system-ui, sans-serif',
           }}
         >
-          <div style={{ fontSize: '6rem', fontWeight: 900, color: '#26ab52', lineHeight: 1 }}>
+          <div style={{ fontSize: '6rem', fontWeight: 900, color: '#327700', lineHeight: 1 }}>
             404
           </div>
           <h1 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '1rem', color: '#111' }}>
@@ -31,7 +31,7 @@ export default function NotFound() {
             style={{
               padding: '0.75rem 1.5rem',
               borderRadius: '1rem',
-              background: '#26ab52',
+              background: '#327700',
               color: 'white',
               fontWeight: 600,
               textDecoration: 'none',

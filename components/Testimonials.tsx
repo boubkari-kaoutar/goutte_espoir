@@ -8,9 +8,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
-  { key: 't1', color: '#26ab52', num: '01' },
-  { key: 't2', color: '#0762d2', num: '02' },
-  { key: 't3', color: '#a3d42a', num: '03' },
+  { key: 't1', color: '#327700', num: '01' },
+  { key: 't2', color: '#1c0b64', num: '02' },
+  { key: 't3', color: '#16390d', num: '03' },
 ];
 
 export default function Testimonials() {

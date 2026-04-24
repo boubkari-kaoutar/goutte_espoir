@@ -12,11 +12,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variants = {
   primary:
-    'bg-[#26ab52] text-white hover:shadow-glow-green hover:scale-105 active:scale-95',
+    'bg-[#327700] text-white hover:shadow-glow-green hover:scale-105 active:scale-95',
   secondary:
-    'border-2 border-gray-200 text-gray-700 hover:border-[#26ab52] hover:text-[#26ab52] hover:bg-[#26ab52]/5',
+    'border-2 border-gray-200 text-gray-700 hover:border-[#327700] hover:text-[#327700] hover:bg-[#327700]/5',
   ghost:
-    'text-[#26ab52] hover:bg-[#26ab52]/8',
+    'text-[#327700] hover:bg-[#327700]/8',
 };
 
 const sizes = {
@@ -39,7 +39,7 @@ export default function Button({
       className={`
         group inline-flex items-center justify-center gap-2 font-semibold
         transition-all duration-300 cursor-pointer select-none
-        focus:outline-none focus:ring-2 focus:ring-[#26ab52]/50 focus:ring-offset-2
+        focus:outline-none focus:ring-2 focus:ring-[#327700]/50 focus:ring-offset-2
         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
         ${variants[variant]}
         ${sizes[size]}

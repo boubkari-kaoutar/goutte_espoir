@@ -33,7 +33,7 @@ export default function AboutHero() {
           className="font-display font-black leading-[1.0] tracking-tight mb-6"
           style={{ fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)' }}>
           <span className="text-white block">{t('discover')}</span>
-          <span className="block" style={{ color: '#26ab52' }}>{t('brand')}</span>
+          <span className="block" style={{ color: '#327700' }}>{t('brand')}</span>
         </h1>
 
         {/* Description */}
@@ -51,7 +51,7 @@ export default function AboutHero() {
           <Link
             href="/services"
             className={`group relative overflow-hidden inline-flex items-center gap-3 px-8 py-4 rounded-full text-white text-[11px] font-bold tracking-[0.18em] uppercase ${isRTL ? 'flex-row-reverse' : ''}`}
-            style={{ background: '#26ab52' }}>
+            style={{ background: '#327700' }}>
             {/* sweep layer */}
             <span
               className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
@@ -69,15 +69,15 @@ export default function AboutHero() {
           <Link
             href="/contact"
             className={`group inline-flex items-center gap-4 text-white text-[11px] font-semibold tracking-[0.18em] uppercase ${isRTL ? 'flex-row-reverse' : ''}`}>
-            <span className="relative w-12 h-12 rounded-full border border-white/25 flex items-center justify-center overflow-hidden transition-colors duration-300 group-hover:border-[#26ab52]">
-              <span className="absolute inset-0 scale-0 group-hover:scale-100 rounded-full transition-transform duration-300 ease-out" style={{ background: '#26ab52' }} />
+            <span className="relative w-12 h-12 rounded-full border border-white/25 flex items-center justify-center overflow-hidden transition-colors duration-300 group-hover:border-[#327700]">
+              <span className="absolute inset-0 scale-0 group-hover:scale-100 rounded-full transition-transform duration-300 ease-out" style={{ background: '#327700' }} />
               <svg
                 className={`relative z-10 w-4 h-4 transition-transform duration-300 ${isRTL ? 'rotate-180 group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}
                 fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </span>
-            <span className="transition-colors duration-200 group-hover:text-[#26ab52]">
+            <span className="transition-colors duration-200 group-hover:text-[#327700]">
               {t('contact')}
             </span>
           </Link>

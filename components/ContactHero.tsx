@@ -81,7 +81,7 @@ export default function ContactHero() {
             {c.title1}
           </h1>
           <h1 className="font-display font-black italic leading-[1.0] tracking-tight"
-            style={{ fontSize: 'clamp(2.6rem, 6vw, 5.5rem)', color: '#26ab52' }}>
+            style={{ fontSize: 'clamp(2.6rem, 6vw, 5.5rem)', color: '#327700' }}>
             {c.title2}
           </h1>
         </div>
@@ -108,7 +108,7 @@ export default function ContactHero() {
           {/* WhatsApp */}
           <a href="https://wa.me/212636227511" target="_blank" rel="noopener noreferrer"
             className={`group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white text-[12px] font-bold tracking-[0.15em] uppercase transition-all duration-300 hover:opacity-90 ${isRTL ? 'flex-row-reverse' : ''}`}
-            style={{ background: '#26ab52' }}>
+            style={{ background: '#327700' }}>
             <span className="transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12 group-hover:translate-y-[-2px]">
               <WhatsAppIcon />
             </span>

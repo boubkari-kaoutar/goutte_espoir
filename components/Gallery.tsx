@@ -97,7 +97,7 @@ function Modal({ project, onClose, isRTL }: { project: Project; onClose: () => v
             <div className="px-8 pt-8 pb-8 flex flex-col gap-5 flex-1">
 
               {/* Tag */}
-              <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#26ab52' }}>
+              <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#327700' }}>
                 {t(`${project.tag}Tag`)}
               </span>
 
@@ -159,7 +159,7 @@ function Modal({ project, onClose, isRTL }: { project: Project; onClose: () => v
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center w-full py-3.5 rounded-2xl font-bold text-[14px] text-white transition-all duration-200 hover:opacity-90 hover:scale-[1.01]"
-                style={{ background: 'linear-gradient(135deg, #26ab52 0%, #1e8f43 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #327700 0%, #1e8f43 100%)' }}
               >
                 {t('modalCta')}
               </a>
@@ -235,7 +235,7 @@ export default function Gallery() {
           <h2 className="font-display font-black text-gray-950 leading-[0.9] tracking-tight"
             style={{ fontSize: 'clamp(2rem, 3.8vw, 3.6rem)' }}>
             {t('title1')}<br />
-            <span style={{ color: '#26ab52' }}>{t('title2')}</span>
+            <span style={{ color: '#327700' }}>{t('title2')}</span>
           </h2>
           <p className="text-gray-400 text-[15px] font-light max-w-md mt-5">{t('subtitle')}</p>
         </div>

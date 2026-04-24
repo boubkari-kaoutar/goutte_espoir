@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --green-primary: #26ab52;
-  --green-light: #a3d42a;
-  --blue-primary: #0762d2;
-  --blue-light: #74d1fa;
-  --font-outfit: 'Outfit', system-ui, sans-serif;
+  --green-primary: #327700;
+  --green-dark: #16390d;
+  --blue-primary: #1c0b64;
+  --blue-light: #31b6e7;
+  --font-outfit: 'Signika', system-ui, sans-serif;
 }
 
 html {
@@ -34,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #26ab52, #0762d2);
+  background: linear-gradient(180deg, #327700, #1c0b64);
   border-radius: 99px;
 }
 
@@ -69,21 +69,21 @@ body {
 
 /* ───── Gradient text ───── */
 .gradient-text-green {
-  background: linear-gradient(135deg, #26ab52 0%, #a3d42a 100%);
+  background: linear-gradient(135deg, #327700 0%, #16390d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-blue {
-  background: linear-gradient(135deg, #0762d2 0%, #74d1fa 100%);
+  background: linear-gradient(135deg, #1c0b64 0%, #31b6e7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-mixed {
-  background: linear-gradient(135deg, #26ab52 0%, #0762d2 100%);
+  background: linear-gradient(135deg, #327700 0%, #1c0b64 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -117,7 +117,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #26ab52, #a3d42a);
+  background: linear-gradient(90deg, #327700, #16390d);
   border-radius: 99px;
   transform: scaleX(0);
   transform-origin: right;
@@ -224,7 +224,7 @@ body {
   position: absolute;
   inset: -8px;
   border-radius: inherit;
-  border: 2px solid #26ab52;
+  border: 2px solid #327700;
   animation: pulseRing 2s ease-out infinite;
 }
 
@@ -260,7 +260,7 @@ body {
 .gradient-border {
   position: relative;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, #26ab52, #74d1fa, #0762d2) border-box;
+              linear-gradient(135deg, #327700, #31b6e7, #1c0b64) border-box;
   border: 2px solid transparent;
 }
 
@@ -298,12 +298,12 @@ body {
   height: 3px;
   width: 48px;
   border-radius: 99px;
-  background: linear-gradient(90deg, #26ab52, #a3d42a);
+  background: linear-gradient(90deg, #327700, #16390d);
 }
 
 .section-line-blue {
   height: 3px;
   width: 48px;
   border-radius: 99px;
-  background: linear-gradient(90deg, #0762d2, #74d1fa);
+  background: linear-gradient(90deg, #1c0b64, #31b6e7);
 }

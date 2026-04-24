@@ -26,7 +26,7 @@ export type Article = {
 export const blogArticles: Article[] = [
   {
     slug: 'choisir-puissance-installation-solaire',
-    color: '#26ab52',
+    color: '#327700',
     image: '/images/blog/a1.png',
     fr: {
       tag: 'Guide pratique',
@@ -94,7 +94,7 @@ export const blogArticles: Article[] = [
   },
   {
     slug: 'energie-solaire-economies-eau',
-    color: '#0762d2',
+    color: '#1c0b64',
     image: '/images/blog/a2.png',
     video: 'https://assets.mixkit.co/videos/preview/mixkit-solar-panels-in-a-field-at-sunset-26466-large.mp4',
     fr: {
@@ -154,7 +154,7 @@ export const blogArticles: Article[] = [
   },
   {
     slug: 'aides-subventions-solaire-maroc-2026',
-    color: '#a3d42a',
+    color: '#16390d',
     image: '/images/blog/a3.png',
     fr: {
       tag: 'Financement',
@@ -216,7 +216,7 @@ export const blogArticles: Article[] = [
   },
   {
     slug: 'panneaux-monocristallins-vs-polycristallins',
-    color: '#74d1fa',
+    color: '#31b6e7',
     image: '/images/blog/a4.png',
     video: 'https://assets.mixkit.co/videos/preview/mixkit-solar-panels-in-the-sun-26464-large.mp4',
     fr: {
@@ -280,7 +280,7 @@ export const blogArticles: Article[] = [
   },
   {
     slug: 'temoignage-cooperative-marrakech',
-    color: '#26ab52',
+    color: '#327700',
     image: '/images/blog/a5.png',
     video: 'https://assets.mixkit.co/videos/preview/mixkit-farmer-walking-in-a-green-field-with-a-tablet-41655-large.mp4',
     fr: {

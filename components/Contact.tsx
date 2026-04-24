@@ -89,7 +89,7 @@ export default function Contact() {
     return () => ctx.revert();
   }, []);
 
-  const inputCls = `w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#26ab52] focus:ring-1 focus:ring-[#26ab52]/20 transition-colors ${isRTL ? 'text-right' : ''}`;
+  const inputCls = `w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#327700] focus:ring-1 focus:ring-[#327700]/20 transition-colors ${isRTL ? 'text-right' : ''}`;
 
   return (
     <section id="contact" ref={sectionRef} className="relative bg-white overflow-hidden">
@@ -103,7 +103,7 @@ export default function Contact() {
             {c.coordTitle}
           </div>
           <div className="font-display font-black leading-[0.9] tracking-tight uppercase"
-            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: '#26ab52' }}>
+            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: '#327700' }}>
             {c.coordAccent}
           </div>
         </div>
@@ -111,8 +111,8 @@ export default function Contact() {
         <div ref={coordRef} className={`px-8 sm:px-14 lg:px-20 py-12 grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-200 ${isRTL ? 'text-right' : ''}`}>
           {/* Col 1 — Location */}
           <div className={`py-8 md:py-0 md:px-10 first:pl-0 last:pr-0 flex flex-col gap-3 ${isRTL ? 'items-end' : ''}`}>
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#26ab5212' }}>
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#26ab52" strokeWidth={1.8}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#32770012' }}>
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#327700" strokeWidth={1.8}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
@@ -123,15 +123,15 @@ export default function Contact() {
 
           {/* Col 2 — Phone */}
           <div className={`py-8 md:py-0 md:px-10 flex flex-col gap-3 ${isRTL ? 'items-end' : ''}`}>
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#0762d212' }}>
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#0762d2" strokeWidth={1.8}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#1c0b6412' }}>
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1c0b64" strokeWidth={1.8}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </div>
             <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{c.col2Label}</div>
             <div className="font-bold text-gray-900 text-[15px]">{c.col2Title}</div>
             <a href="https://wa.me/212636227511" dir="ltr"
-              className="text-[#0762d2] text-[13px] font-mono font-semibold hover:opacity-70 transition-opacity">
+              className="text-[#1c0b64] text-[13px] font-mono font-semibold hover:opacity-70 transition-opacity">
               {c.col2Value}
             </a>
           </div>
@@ -167,7 +167,7 @@ export default function Contact() {
                 {c.headingMain}
               </div>
               <div className="font-display font-black leading-[0.9] tracking-tight italic"
-                style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', color: '#26ab52' }}>
+                style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', color: '#327700' }}>
                 {c.headingAccent}
               </div>
             </div>
@@ -178,9 +178,9 @@ export default function Contact() {
           {/* Trust badges */}
           <div className={`flex flex-wrap gap-3 mb-10 ${isRTL ? 'flex-row-reverse' : ''}`}>
             {[
-              { label: c.trust1, color: '#26ab52' },
-              { label: c.trust2, color: '#0762d2' },
-              { label: c.trust3, color: '#a3d42a' },
+              { label: c.trust1, color: '#327700' },
+              { label: c.trust2, color: '#1c0b64' },
+              { label: c.trust3, color: '#16390d' },
             ].map(({ label, color }) => (
               <span key={label}
                 className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full border uppercase tracking-wider"
@@ -194,9 +194,9 @@ export default function Contact() {
           {/* Info rows */}
           <div className="flex flex-col gap-0 border-t border-gray-100">
             {[
-              { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z', text: t('info.location' as Parameters<typeof t>[0]), color: '#26ab52' },
-              { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', text: t('info.availability' as Parameters<typeof t>[0]), color: '#0762d2' },
-              { icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z', text: t('info.response' as Parameters<typeof t>[0]), color: '#a3d42a' },
+              { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z', text: t('info.location' as Parameters<typeof t>[0]), color: '#327700' },
+              { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', text: t('info.availability' as Parameters<typeof t>[0]), color: '#1c0b64' },
+              { icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z', text: t('info.response' as Parameters<typeof t>[0]), color: '#16390d' },
             ].map(({ icon, text, color }) => (
               <div key={text} className={`flex items-center gap-4 py-4 border-b border-gray-100 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -216,7 +216,7 @@ export default function Contact() {
           <div className="relative rounded-2xl border border-gray-100 bg-white overflow-hidden p-8"
             style={{ boxShadow: '0 4px 40px rgba(0,0,0,0.05)' }}>
             <div className="absolute top-0 left-0 right-0 h-0.5"
-              style={{ background: 'linear-gradient(90deg, #26ab52, #0762d2, #a3d42a)' }} />
+              style={{ background: 'linear-gradient(90deg, #327700, #1c0b64, #16390d)' }} />
 
             <div className={`text-[10px] font-bold text-gray-300 uppercase tracking-[0.28em] mb-6 ${isRTL ? 'text-right' : ''}`}>
               {t('badge')}

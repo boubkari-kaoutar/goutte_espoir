@@ -75,7 +75,7 @@ export default function PageLoader() {
           style={{ borderColor: 'rgba(38,171,82,0.2)', animation: 'ping 2s cubic-bezier(0,0,0.2,1) infinite' }}
         />
         <div className="relative w-full h-full drop-shadow-lg">
-          <Image src="/logo.png" alt="Goutte d'Espoir" fill className="object-contain" priority />
+          <Image src="/nvLogo/LOGO-GOUTTE-D'ESPOIR-.png" alt="Goutte d'Espoir" fill className="object-contain" priority />
         </div>
       </div>
 
@@ -85,7 +85,7 @@ export default function PageLoader() {
           Goutte{' '}
           <span
             style={{
-              background: 'linear-gradient(135deg, #26ab52, #a3d42a)',
+              background: 'linear-gradient(135deg, #327700, #16390d)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -105,7 +105,7 @@ export default function PageLoader() {
               key={i}
               className="w-1.5 h-1.5 rounded-full"
               style={{
-                background: i === 0 ? '#26ab52' : i === 1 ? '#0762d2' : '#a3d42a',
+                background: i === 0 ? '#327700' : i === 1 ? '#1c0b64' : '#16390d',
                 animation: `bounce 1.2s ease-in-out ${i * 0.2}s infinite`,
               }}
             />
@@ -124,7 +124,7 @@ export default function PageLoader() {
           className="h-full rounded-full"
           style={{
             width: '0%',
-            background: 'linear-gradient(90deg, #26ab52, #a3d42a, #0762d2, #74d1fa)',
+            background: 'linear-gradient(90deg, #327700, #16390d, #1c0b64, #31b6e7)',
           }}
         />
       </div>

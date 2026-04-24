@@ -71,7 +71,7 @@ export default function Hero() {
               style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)' }}>
               {t('headline1')}{' '}
               <br className="hidden sm:block" />
-              <span style={{ color: '#26ab52' }}>
+              <span style={{ color: '#327700' }}>
                 {t('headline2')}
               </span>
             </h1>
@@ -89,7 +89,7 @@ export default function Hero() {
           <div ref={ctaRef} className={`mt-10 flex items-center gap-4 flex-wrap ${isRTL ? 'flex-row-reverse justify-end' : 'justify-center'}`}>
             <Link href="/services"
               className="group relative overflow-hidden inline-flex items-center rounded-xl text-white font-semibold px-8 py-3.5"
-              style={{ background: '#26ab52', fontSize: '14px' }}>
+              style={{ background: '#327700', fontSize: '14px' }}>
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
                 style={{ background: '#1a8a40' }} />
               <span className="relative z-10">{t('cta')}</span>
@@ -110,7 +110,7 @@ export default function Hero() {
 
       {/* ── Marquee ── */}
       <div className="relative z-10 overflow-hidden py-3.5"
-        style={{ background: '#26ab52' }}>
+        style={{ background: '#327700' }}>
         <div ref={marqueeRef}
           className={`flex items-center whitespace-nowrap ${isRTL ? 'flex-row-reverse' : ''}`}
           style={{ width: '200%' }}>

@@ -1,7 +1,7 @@
 import { Link } from '@/i18n/navigation';
 import CTABanner from '@/components/CTABanner';
 
-const COLOR = '#74d1fa';
+const COLOR = '#31b6e7';
 
 const IMG = {
   hero:    '/Traitement%20de%20l%27eau.png',

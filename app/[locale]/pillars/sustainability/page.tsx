@@ -104,12 +104,12 @@ export default async function SustainabilityPage({ params }: { params: Promise<{
             {c.back}
           </Link>
           <div className={`flex items-center gap-3 mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
-            <span className="font-black text-[11px] tracking-[0.3em] uppercase" style={{ color: '#a3d42a' }}>{c.num}</span>
+            <span className="font-black text-[11px] tracking-[0.3em] uppercase" style={{ color: '#16390d' }}>{c.num}</span>
             <div className="w-6 h-px bg-gray-200" />
             <span className="text-gray-400 text-[11px] tracking-[0.2em] uppercase font-medium">{c.tagline}</span>
           </div>
           <h1 className={`font-display font-black leading-tight tracking-tight mb-6 ${isRTL ? 'text-right' : ''}`}
-            style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: '#a3d42a' }}>
+            style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: '#16390d' }}>
             {c.title}
           </h1>
           <p className={`text-gray-500 text-[1.05rem] leading-relaxed font-light max-w-2xl ${isRTL ? 'text-right' : ''}`}>
@@ -136,7 +136,7 @@ export default async function SustainabilityPage({ params }: { params: Promise<{
               <div key={n} className="rounded-xl border border-gray-100 overflow-hidden hover:shadow-sm transition-shadow">
                 <img src={img} alt={title} className="w-full h-44 object-cover" />
                 <div className={`p-6 ${isRTL ? 'text-right' : ''}`}>
-                  <div className="font-semibold text-[11px] mb-3" style={{ color: '#a3d42a' }}>{n}</div>
+                  <div className="font-semibold text-[11px] mb-3" style={{ color: '#16390d' }}>{n}</div>
                   <h3 className="font-bold text-gray-900 text-[15px] mb-2">{title}</h3>
                   <p className="text-gray-400 text-[13px] leading-relaxed font-light">{desc}</p>
                 </div>
@@ -152,13 +152,13 @@ export default async function SustainabilityPage({ params }: { params: Promise<{
           <div className={isRTL ? 'text-right' : ''}>
             <h2 className="font-display font-black text-gray-950 leading-tight tracking-tight mb-6"
               style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}>
-              {c.commitTitle}<br /><span style={{ color: '#a3d42a' }}>{c.commitHighlight}</span>
+              {c.commitTitle}<br /><span style={{ color: '#16390d' }}>{c.commitHighlight}</span>
             </h2>
             <p className="text-gray-500 text-[15px] leading-relaxed font-light mb-8">{c.commitDesc}</p>
             <div className="space-y-4">
               {c.features.map((item) => (
                 <div key={item} className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <svg className="w-4 h-4 flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="#a3d42a">
+                  <svg className="w-4 h-4 flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="#16390d">
                     <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" />
                   </svg>
                   <span className="text-gray-600 text-[14px] font-medium">{item}</span>
@@ -171,7 +171,7 @@ export default async function SustainabilityPage({ params }: { params: Promise<{
             <div className="grid grid-cols-3 gap-4">
               {c.stats.map(({ value, label }) => (
                 <div key={label} className="bg-white rounded-xl p-4 border border-gray-100 text-center">
-                  <div className="font-black text-xl" style={{ color: '#a3d42a' }} dir="ltr">{value}</div>
+                  <div className="font-black text-xl" style={{ color: '#16390d' }} dir="ltr">{value}</div>
                   <div className="text-gray-400 text-[11px] font-medium mt-1 uppercase tracking-wider">{label}</div>
                 </div>
               ))}

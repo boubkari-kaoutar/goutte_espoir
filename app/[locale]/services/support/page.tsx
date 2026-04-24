@@ -15,16 +15,16 @@ const t = {
     plansLabel: 'Nos formules de maintenance',
     plans: [
       {
-        plan: 'Essentiel', price: 'À partir de 800 DH/an', color: '#a3d42a',
+        plan: 'Essentiel', price: 'À partir de 800 DH/an', color: '#16390d',
         features: ['Visite annuelle de contrôle', 'Nettoyage des panneaux (1×/an)', 'Rapport de performance annuel', 'Hotline téléphonique'],
       },
       {
-        plan: 'Confort', price: 'À partir de 1 800 DH/an', color: '#26ab52', featured: true,
+        plan: 'Confort', price: 'À partir de 1 800 DH/an', color: '#327700', featured: true,
         features: ['2 visites de contrôle/an', 'Nettoyage des panneaux (2×/an)', 'Monitoring en temps réel', 'Intervention sous 48h', 'Rapport trimestriel'],
         badge: 'Recommandé',
       },
       {
-        plan: 'Premium', price: 'À partir de 3 200 DH/an', color: '#0762d2',
+        plan: 'Premium', price: 'À partir de 3 200 DH/an', color: '#1c0b64',
         features: ['Visites illimitées', 'Nettoyage mensuel', 'Monitoring 24h/7j avec alertes', 'Intervention sous 24h', 'Remplacement pièces inclus', 'Rapport mensuel détaillé'],
       },
     ],
@@ -53,16 +53,16 @@ const t = {
     plansLabel: 'صيغ الصيانة لدينا',
     plans: [
       {
-        plan: 'أساسي', price: 'ابتداءً من 800 درهم/سنة', color: '#a3d42a',
+        plan: 'أساسي', price: 'ابتداءً من 800 درهم/سنة', color: '#16390d',
         features: ['زيارة مراقبة سنوية', 'تنظيف الألواح (مرة/سنة)', 'تقرير أداء سنوي', 'خط ساخن هاتفي'],
       },
       {
-        plan: 'مريح', price: 'ابتداءً من 1 800 درهم/سنة', color: '#26ab52', featured: true,
+        plan: 'مريح', price: 'ابتداءً من 1 800 درهم/سنة', color: '#327700', featured: true,
         features: ['زيارتا مراقبة/سنة', 'تنظيف الألواح (مرتين/سنة)', 'مراقبة فورية', 'تدخل خلال 48 ساعة', 'تقرير ربع سنوي'],
         badge: 'موصى به',
       },
       {
-        plan: 'بريميوم', price: 'ابتداءً من 3 200 درهم/سنة', color: '#0762d2',
+        plan: 'بريميوم', price: 'ابتداءً من 3 200 درهم/سنة', color: '#1c0b64',
         features: ['زيارات غير محدودة', 'تنظيف شهري', 'مراقبة 24 ساعة/7 أيام مع تنبيهات', 'تدخل خلال 24 ساعة', 'استبدال القطع مشمول', 'تقرير شهري مفصّل'],
       },
     ],
@@ -103,12 +103,12 @@ export default async function SupportPage({ params }: { params: Promise<{ locale
             {c.back}
           </Link>
           <div className={`flex items-center gap-3 mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
-            <span className="font-black text-[11px] tracking-[0.3em] uppercase" style={{ color: '#a3d42a' }}>03</span>
+            <span className="font-black text-[11px] tracking-[0.3em] uppercase" style={{ color: '#16390d' }}>03</span>
             <div className="w-6 h-px bg-gray-200" />
             <span className="text-gray-400 text-[11px] tracking-[0.2em] uppercase font-medium">{c.tagline}</span>
           </div>
           <h1 className={`font-display font-black text-gray-950 leading-tight tracking-tight mb-6 ${isRTL ? 'text-right' : ''}`}
-            style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: '#a3d42a' }}>
+            style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: '#16390d' }}>
             {c.title}
           </h1>
           <p className={`text-gray-500 text-[1.05rem] leading-relaxed font-light max-w-2xl ${isRTL ? 'text-right' : ''}`}>
@@ -133,10 +133,10 @@ export default async function SupportPage({ params }: { params: Promise<{ locale
           <div className="grid md:grid-cols-3 gap-5">
             {c.plans.map(({ plan, price, color, features, featured, badge }) => (
               <div key={plan}
-                className={`rounded-xl border overflow-hidden ${featured ? 'border-[#26ab52] shadow-md' : 'border-gray-100'}`}>
+                className={`rounded-xl border overflow-hidden ${featured ? 'border-[#327700] shadow-md' : 'border-gray-100'}`}>
                 {featured && badge && (
                   <div className="py-2 text-center text-[11px] font-bold text-white uppercase tracking-widest"
-                    style={{ background: '#26ab52' }}>
+                    style={{ background: '#327700' }}>
                     {badge}
                   </div>
                 )}
@@ -171,13 +171,13 @@ export default async function SupportPage({ params }: { params: Promise<{ locale
           <div className={isRTL ? 'text-right' : ''}>
             <h2 className="font-display font-black text-gray-950 leading-tight tracking-tight mb-6"
               style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}>
-              {c.monitorTitle}<br /><span style={{ color: '#a3d42a' }}>{c.monitorHighlight}</span>
+              {c.monitorTitle}<br /><span style={{ color: '#16390d' }}>{c.monitorHighlight}</span>
             </h2>
             <p className="text-gray-500 text-[15px] leading-relaxed font-light mb-8">{c.monitorDesc}</p>
             <div className="space-y-4 mb-8">
               {c.monitorFeatures.map((item) => (
                 <div key={item} className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <svg className="w-4 h-4 flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="#a3d42a">
+                  <svg className="w-4 h-4 flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="#16390d">
                     <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" />
                   </svg>
                   <span className="text-gray-600 text-[14px] font-medium">{item}</span>
@@ -187,7 +187,7 @@ export default async function SupportPage({ params }: { params: Promise<{ locale
             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-100">
               {c.stats.map(({ value, label }) => (
                 <div key={label}>
-                  <div className="font-black text-xl number-badge" style={{ color: '#a3d42a' }} dir="ltr">{value}</div>
+                  <div className="font-black text-xl number-badge" style={{ color: '#16390d' }} dir="ltr">{value}</div>
                   <div className="text-gray-400 text-[11px] font-medium mt-1 uppercase tracking-wider">{label}</div>
                 </div>
               ))}

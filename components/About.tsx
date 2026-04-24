@@ -9,16 +9,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: '25+',  label: 'stat1', color: '#26ab52' },
-  { value: '150+', label: 'stat2', color: '#0762d2' },
-  { value: '60T',  label: 'stat3', color: '#a3d42a' },
+  { value: '25+',  label: 'stat1', color: '#327700' },
+  { value: '150+', label: 'stat2', color: '#1c0b64' },
+  { value: '60T',  label: 'stat3', color: '#16390d' },
 ];
 
 const symbols = [
-  { key: 'drop',      number: '01', color: '#74d1fa' },
-  { key: 'hands',     number: '02', color: '#26ab52' },
-  { key: 'energy',    number: '03', color: '#a3d42a' },
-  { key: 'community', number: '04', color: '#0762d2' },
+  { key: 'drop',      number: '01', color: '#31b6e7' },
+  { key: 'hands',     number: '02', color: '#327700' },
+  { key: 'energy',    number: '03', color: '#16390d' },
+  { key: 'community', number: '04', color: '#1c0b64' },
 ];
 
 export default function About() {
@@ -73,16 +73,16 @@ export default function About() {
           {/* Mission / Vision */}
           <div className="space-y-4 mb-12">
             <div className="flex gap-4">
-              <div className="w-0.5 bg-[#26ab52] flex-shrink-0 mt-1 rounded-full" style={{ minHeight: '100%' }} />
+              <div className="w-0.5 bg-[#327700] flex-shrink-0 mt-1 rounded-full" style={{ minHeight: '100%' }} />
               <div>
-                <div className="text-[11px] font-bold text-[#26ab52] uppercase tracking-[0.2em] mb-1.5">{t('mission')}</div>
+                <div className="text-[11px] font-bold text-[#327700] uppercase tracking-[0.2em] mb-1.5">{t('mission')}</div>
                 <p className="text-gray-500 text-[14px] leading-relaxed">{t('missionDesc')}</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="w-0.5 bg-[#0762d2] flex-shrink-0 mt-1 rounded-full" style={{ minHeight: '100%' }} />
+              <div className="w-0.5 bg-[#1c0b64] flex-shrink-0 mt-1 rounded-full" style={{ minHeight: '100%' }} />
               <div>
-                <div className="text-[11px] font-bold text-[#0762d2] uppercase tracking-[0.2em] mb-1.5">{t('vision')}</div>
+                <div className="text-[11px] font-bold text-[#1c0b64] uppercase tracking-[0.2em] mb-1.5">{t('vision')}</div>
                 <p className="text-gray-500 text-[14px] leading-relaxed">{t('visionDesc')}</p>
               </div>
             </div>
@@ -103,10 +103,10 @@ export default function About() {
         <div ref={rightRef} className={isRTL ? 'lg:order-1' : 'lg:order-2'}>
 
           {/* Logo */}
-          <div className="flex justify-center lg:justify-start mb-12">
-            <div className="relative w-52 h-52 rounded-2xl border border-gray-100 flex items-center justify-center p-10"
-              style={{ background: 'linear-gradient(135deg, rgba(38,171,82,0.04) 0%, rgba(7,98,210,0.02) 100%)' }}>
-              <Image src="/logo.png" alt="Goutte d'Espoir" fill className="object-contain p-8" />
+          <div className="flex justify-center mb-12">
+            <div className="relative rounded-2xl border border-gray-100 flex items-center justify-center"
+              style={{ width: '280px', height: '120px', background: 'linear-gradient(135deg, rgba(50,119,0,0.04) 0%, rgba(28,11,100,0.02) 100%)' }}>
+              <Image src="/nvLogo/LOGO-GOUTTE-D'ESPOIR-.png" alt="Goutte d'Espoir" fill className="object-contain p-4" />
             </div>
           </div>
 

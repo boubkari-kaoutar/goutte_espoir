@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const stepKeys = ['s1', 's2', 's3', 's4'] as const;
-const stepColors = ['#26ab52', '#0762d2', '#a3d42a', '#74d1fa'];
+const stepColors = ['#327700', '#1c0b64', '#16390d', '#31b6e7'];
 const stepNumbers = ['01', '02', '03', '04'];
 
 export default function Process() {
@@ -86,7 +86,7 @@ export default function Process() {
           <h2 className="font-display font-black text-gray-950 leading-[0.9] tracking-tight"
             style={{ fontSize: 'clamp(2rem, 3.8vw, 3.6rem)' }}>
             {t('title1')}<br />
-            <span style={{ color: '#26ab52' }}>{t('title2')}</span>
+            <span style={{ color: '#327700' }}>{t('title2')}</span>
           </h2>
           <p className="text-gray-400 text-[15px] font-light max-w-md mt-5">{t('subtitle')}</p>
         </div>
@@ -97,7 +97,7 @@ export default function Process() {
 
         {/* Vertical center line */}
         <div ref={lineRef} className="absolute top-16 bottom-16 left-1/2 -translate-x-px w-px hidden lg:block"
-          style={{ background: 'linear-gradient(to bottom, #26ab52, #0762d2, #a3d42a, #74d1fa)' }} />
+          style={{ background: 'linear-gradient(to bottom, #327700, #1c0b64, #16390d, #31b6e7)' }} />
 
         <div className="flex flex-col">
           {stepKeys.map((key, i) => {

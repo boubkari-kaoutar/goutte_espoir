@@ -11,12 +11,12 @@ const config: Config = {
     extend: {
       colors: {
         green: {
-          primary: '#26ab52',
-          light: '#a3d42a',
+          primary: '#327700',
+          dark: '#16390d',
         },
         blue: {
-          primary: '#0762d2',
-          light: '#74d1fa',
+          primary: '#1c0b64',
+          light: '#31b6e7',
         },
       },
       fontFamily: {
@@ -41,8 +41,8 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       boxShadow: {
-        'glow-green': '0 0 40px rgba(38, 171, 82, 0.3)',
-        'glow-blue': '0 0 40px rgba(7, 98, 210, 0.3)',
+        'glow-green': '0 0 40px rgba(50, 119, 0, 0.3)',
+        'glow-blue': '0 0 40px rgba(28, 11, 100, 0.3)',
         'glass': '0 8px 32px rgba(0, 0, 0, 0.08)',
       },
       backdropBlur: {

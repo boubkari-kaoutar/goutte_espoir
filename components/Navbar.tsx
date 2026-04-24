@@ -63,8 +63,14 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0">
-          <div className="relative w-12 h-12 flex-shrink-0" style={{ transform: 'scale(1.6)', transformOrigin: 'left center' }}>
-            <Image src="/logo.png" alt="Goutte d'Espoir" fill className="object-contain" priority />
+          <div className="relative w-16 h-16 flex-shrink-0" style={{ transform: 'scale(1.8)', transformOrigin: 'left center' }}>
+            <Image
+              src="/nvLogo/LOGO-GOUTTE-D'ESPOIR-.png"
+              alt="Goutte d'Espoir"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
 
@@ -74,7 +80,7 @@ export default function Navbar() {
             <Link key={key} href={href}
               className={`relative text-[15px] font-semibold transition-colors duration-200 whitespace-nowrap ${
                 isActive(href)
-                  ? 'text-[#26ab52]'
+                  ? 'text-[#327700]'
                   : isTransparent
                     ? 'text-white hover:text-white/80'
                     : 'text-gray-500 hover:text-gray-900'
@@ -82,7 +88,7 @@ export default function Navbar() {
 >
               {t(key as Parameters<typeof t>[0])}
               {isActive(href) && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full" style={{ background: '#26ab52' }} />
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full" style={{ background: '#327700' }} />
               )}
             </Link>
           ))}
@@ -99,7 +105,7 @@ export default function Navbar() {
             <div
               className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-full transition-all duration-300 ease-in-out"
               style={{
-                background: '#26ab52',
+                background: '#327700',
                 left: locale === 'fr' ? '2px' : 'calc(50%)',
               }}
             />
@@ -140,7 +146,7 @@ export default function Navbar() {
             <Link key={key} href={href} onClick={() => setMenuOpen(false)}
               className={`w-full py-2.5 text-[13px] font-medium border-b border-gray-50 last:border-0 transition-colors ${
                 isRTL ? 'text-right' : ''
-              } ${isActive(href) ? 'text-[#26ab52] font-semibold' : 'text-gray-500'}`}>
+              } ${isActive(href) ? 'text-[#327700] font-semibold' : 'text-gray-500'}`}>
               {t(key as Parameters<typeof t>[0])}
             </Link>
           ))}
@@ -153,7 +159,7 @@ export default function Navbar() {
                     ? 'text-white'
                     : 'text-gray-400 bg-gray-100'
                 }`}
-                style={locale === loc ? { background: '#26ab52' } : {}}>
+                style={locale === loc ? { background: '#327700' } : {}}>
                 {loc.toUpperCase()}
               </button>
             ))}

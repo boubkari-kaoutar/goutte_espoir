@@ -66,17 +66,17 @@ export default function FAQ() {
               className={`w-full flex items-center justify-between gap-6 py-7 text-left transition-colors duration-200 group ${isRTL ? 'flex-row-reverse text-right' : ''}`}
             >
               <div className="flex items-center gap-5">
-                <span className="font-black text-xs number-badge" style={{ color: open === i ? '#26ab52' : 'rgba(0,0,0,0.15)' }}>
+                <span className="font-black text-xs number-badge" style={{ color: open === i ? '#327700' : 'rgba(0,0,0,0.15)' }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className={`font-bold text-gray-900 text-base leading-snug transition-colors duration-200 ${open === i ? 'text-[#26ab52]' : 'group-hover:text-gray-700'}`}>
+                <span className={`font-bold text-gray-900 text-base leading-snug transition-colors duration-200 ${open === i ? 'text-[#327700]' : 'group-hover:text-gray-700'}`}>
                   {t(`${key}.question`)}
                 </span>
               </div>
               <div className="w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-300"
                 style={{
-                  borderColor: open === i ? '#26ab52' : 'rgba(0,0,0,0.1)',
-                  background: open === i ? '#26ab52' : 'transparent',
+                  borderColor: open === i ? '#327700' : 'rgba(0,0,0,0.1)',
+                  background: open === i ? '#327700' : 'transparent',
                 }}>
                 <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 transition-transform duration-300"
                   style={{ color: open === i ? 'white' : '#888', transform: open === i ? 'rotate(180deg)' : 'none' }}

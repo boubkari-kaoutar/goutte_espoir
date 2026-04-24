@@ -8,11 +8,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const whyItems = [
-  { key: 'expertise',    color: '#26ab52', number: '01' },
-  { key: 'transparency', color: '#0762d2', number: '02' },
-  { key: 'custom',       color: '#a3d42a', number: '03' },
-  { key: 'commitment',   color: '#74d1fa', number: '04' },
-  { key: 'impact',       color: '#26ab52', number: '05' },
+  { key: 'expertise',    color: '#327700', number: '01' },
+  { key: 'transparency', color: '#1c0b64', number: '02' },
+  { key: 'custom',       color: '#16390d', number: '03' },
+  { key: 'commitment',   color: '#31b6e7', number: '04' },
+  { key: 'impact',       color: '#327700', number: '05' },
 ];
 
 export default function WhyChooseUs() {

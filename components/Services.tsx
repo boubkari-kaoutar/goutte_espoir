@@ -13,7 +13,7 @@ function getServices(isRTL: boolean) {
     {
       key: 'solar',
       number: '01',
-      color: '#26ab52',
+      color: '#327700',
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&h=560&q=80',
       stats: [
         { value: '−70%', label: isRTL ? 'متوسط التوفير' : 'économies moy.' },
@@ -24,7 +24,7 @@ function getServices(isRTL: boolean) {
     {
       key: 'eco',
       number: '02',
-      color: '#0762d2',
+      color: '#1c0b64',
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&h=560&q=80',
       stats: [
         { value: '100%', label: isRTL ? 'مجاني' : 'gratuit' },
@@ -35,7 +35,7 @@ function getServices(isRTL: boolean) {
     {
       key: 'support',
       number: '03',
-      color: '#a3d42a',
+      color: '#16390d',
       image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=560&q=80',
       stats: [
         { value: '6j/7', label: isRTL ? 'التوفر' : 'disponibilité' },
@@ -46,7 +46,7 @@ function getServices(isRTL: boolean) {
     {
       key: 'water',
       number: '04',
-      color: '#74d1fa',
+      color: '#31b6e7',
       image: '/Traitement%20de%20l%27eau.png',
       stats: [
         { value: '100%', label: isRTL ? 'مستقل' : 'autonome' },
